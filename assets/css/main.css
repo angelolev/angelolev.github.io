@@ -27,7 +27,7 @@ p {
     padding-top: 25px;
 }
 a {
-    color: #16a085;
+    color: #3498db;
     word-wrap: break-word;
     -webkit-transition: color .1s ease-in, background .1s ease-in;
     -moz-transition: color .1s ease-in, background .1s ease-in;
@@ -58,16 +58,16 @@ hr {
 .btn {
     border-radius: 0;
 }
-.btn-green {
+.btn-blue {
     color: #fff;
-    background-color: #1abc9c;
-    border-color: #1abc9c;
+    background-color: #3498db;
+    border-color: #3498db;
     font-weight: 300;
 }
-.btn-green:hover, .btn-green:focus, .btn-green:active, .btn-green.active, .open .dropdown-toggle.btn-green {
+.btn-blue:hover, .btn-blue:focus, .btn-blue:active, .btn-blue.active, .open .dropdown-toggle.btn-blue {
     color: #fff;
-    background-color: #16a085;
-    border-color: #16a085;
+    background-color: #2980b9;
+    border-color: #2980b9;
     font-weight: 300;
 }
 .tm {
@@ -104,7 +104,7 @@ hr {
     margin-top: 20px;
 }
 .menu h1.logo a:hover {
-    color: #1abc9c;
+    color: #3498db;
 }
 .menu img.logo {
     margin: 20px 0;
@@ -208,14 +208,28 @@ hr {
     -o-transition: all .1s ease-in-out;
     transition: all .1s ease-in-out;
 }
+.sombra {
+    box-shadow: 0 758px rgb(0, 0, 0) inset;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    border: none;
+    padding: 0;
+    margin: 0;
+    opacity: .5;
+    min-height: 740px;
+}
 #headerwrap {
-    background: url(../img/header-bg1.jpg) no-repeat center top;
+    background: url(../img/background.png) no-repeat center top;
     margin-top: -10px;
     padding-top: 20px;
     text-align: center;
     background-attachment: relative;
     background-position: center center;
-    min-height: 750px;
+    max-height: 780px;
     width: 100%;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
@@ -354,7 +368,7 @@ hr {
 #portfolio {
     width: 100%}
 #services {
-    background: #1abc9c;
+    background: #3498db;
     margin-top: 25px;
     padding-top: 35px;
     padding-bottom: 35px;
@@ -400,11 +414,14 @@ hr {
     margin: 0;
     padding: 15px;
 }
-#sf .lg {
-    background-color: #1abc9c;
+#sf .facebook {
+    background-color: #2980b9;
 }
-#sf .dg {
-    background-color: #16a085;
+#sf .twitter {
+    background-color: #3498db;
+}
+#sf .google {
+    background-color: #e74c3c;
 }
 #sf h4 {
     color: #fff;
