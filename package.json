@@ -1,0 +1,29 @@
+{
+  "name": "starter-kit-leadgen",
+  "version": "1.0.0",
+  "description": "A starter kit for frontend development for leadgen websites",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd express && node server.js"
+  },
+  "author": "LeadGen Team",
+  "license": "ISC",
+  "devDependencies": {
+    "bootstrap-sass": "3.3.7",
+    "gulp": "3.9.1",
+    "gulp-autoprefixer": "3.1.1",
+    "gulp-clean": "0.3.2",
+    "gulp-clean-css": "3.0.4",
+    "gulp-concat": "2.6.1",
+    "gulp-cssnano": "2.1.2",
+    "gulp-if": "2.0.2",
+    "gulp-imagemin": "3.3.0",
+    "gulp-jshint": "2.0.4",
+    "gulp-sass": "3.1.0",
+    "gulp-sourcemaps": "2.6.1",
+    "gulp-stylelint": "3.9.0",
+    "gulp-uglify": "2.1.2",
+    "gulp-util": "3.0.8"
+  }
+}

@@ -1,0 +1,105 @@
+[class^="icon-"], [class*=" icon-"] {
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+sub, sup {
+    font-size: 50%;
+    top: -1em;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: $text-size;
+    color: $gray;
+    padding-top: 84px;
+
+    @include breakpoint($sm) {
+        padding-top: 78px;
+    }
+}
+
+section {
+    position: relative;
+
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+
+        @include breakpoint($sm) {
+            padding-left: 27px;
+            padding-right: 27px;
+        }
+
+        @include breakpoint($md) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+}
+
+.call {
+    position: relative;
+
+    @include breakpoint($md) {
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 7;
+        }
+    }
+}
+
+.phone {
+    color: $blue;
+    display: inline-block;
+}
+
+.btn {
+    background: $dark-orange;
+    font-family: $secondary-font-bold;
+    border-radius: 60px;
+    color: $white;
+    display: block;
+
+    font: {
+        size: 18px;
+        weight: bold;
+    }
+
+    margin: 0 auto;
+    padding: 14px 0;
+    text-transform: uppercase;
+    width: 250px;
+    height: 56px;
+
+    &:focus {
+        outline: none;
+        color: $white;
+    }
+
+    &:hover {
+        color: $white;
+    }
+}
+
+input, select, textarea {
+    font-family: $secondary-font;
+}
+
+.has-shadow {
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.42);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.42);
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.42);
+}

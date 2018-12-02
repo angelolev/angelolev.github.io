@@ -1,0 +1,32 @@
+{
+  "input": {
+    "sass": "src/scss/styles.scss",
+    "js": [
+      "src/js/jquery-1.12.4.min.js",
+      "src/js/jquery.validate.min.js",
+      "src/js/jquery.alphanum.js",
+      "src/js/jquery.placeholder.js",
+      "src/js/bootstrap.min.js",
+      "src/js/select2.min.js",
+      "src/js/tooltipster.bundle.min.js",
+      "src/js/moment.js",
+      "src/js/text-mask.js",
+      "src/js/_validators.js",
+      "src/js/_events.js",
+      "src/js/_functions.js",
+      "src/js/_form-lead.js",
+      "src/js/_form-drip.js",
+      "src/js/_form-zip.js",
+      "src/js/_lazy-loading.js"
+    ],
+    "images": "src/images/**",
+    "fonts": "src/fonts/*"
+  },
+  "output": {
+    "dist": "assets",
+    "css": "assets/css",
+    "js": "assets/js",
+    "images": "assets/images",
+    "fonts": "assets/fonts"
+  }
+}

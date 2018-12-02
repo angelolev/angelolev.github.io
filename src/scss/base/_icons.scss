@@ -1,0 +1,22 @@
+/* Add icons list */
+$icons: ( 
+    play: "\e90f", 
+    phone: "\e904", 
+    logo: "\e900", 
+    hands: "\e901", 
+    exam: "\e902", 
+    wallet: "\e903", 
+    secure: "\e90b", 
+    norton: "\e90c", 
+    bbb: "\e90d",
+    cancel: "\e910",
+    single-phone: "\e911",
+    not-found: "\e912"
+);
+
+/* Create class for each icon in the list */
+@each $name, $value in $icons {
+    .icon-#{$name}:before {
+        content: $value;
+    }
+}

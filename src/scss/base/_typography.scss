@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900');
+
+$font-path: "/assets/fonts/";
+
+@font-face {
+    font-family: 'icomoon';
+    src: url('#{$font-path}/icomoon.eot?5p3eip');
+    src: url('#{$font-path}/icomoon.eot?5p3eip#iefix') format('embedded-opentype'),
+        url('#{$font-path}/icomoon.woff2?5p3eip') format('woff2'),
+        url('#{$font-path}/icomoon.ttf?5p3eip') format('truetype'),
+        url('#{$font-path}/icomoon.svg?5p3eip#icomoon') format('svg')
+        url('#{$font-path}/icomoon.woff?5p3eip') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@include font-face("Futura PT", "../fonts/FuturaPT-Medium");
+@include font-face("Futura PT Bold", "../fonts/FuturaPT-Bold");
