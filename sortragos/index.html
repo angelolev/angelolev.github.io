@@ -6,17 +6,82 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sortragos</title>
     <link rel="stylesheet" href="../assets/css/bundle.css">
+    <style type="text/css">
+        html, body {
+          margin: 0;
+          padding: 0;
+        }
+    
+        * {
+          box-sizing: border-box;
+        }
+    
+        .slider {
+            width: 75%;
+            margin: 30px auto 0;
+        }
+    
+        .slick-slide {
+          margin: 0px 20px;
+        }
+    
+        .slick-slide img {
+          width: 100%;
+        }
+    
+        .slick-prev:before,
+        .slick-next:before {
+          color: black;
+        }
+    
+    
+        .slick-slide {
+          transition: all ease-in-out .3s;
+          opacity: .2;
+        }
+        
+        .slick-active {
+          opacity: .5;
+        }
+    
+        .slick-current {
+          opacity: 1;
+        }
+      </style>
 </head>
 <body>
     <main>
-        <section class="row banner">
+        <section class="row variable slider">
+            <div>
+                <img src="http://placehold.it/300x300?text=1">
+            </div>
+            <div>
+                <img src="http://placehold.it/300x300?text=2">
+            </div>
+            <div>
+                <img src="http://placehold.it/300x300?text=3">
+            </div>
+            <div>
+                <img src="http://placehold.it/300x300?text=4">
+            </div>
+            <div>
+                <img src="http://placehold.it/300x300?text=5">
+            </div>
+            <div>
+                <img src="http://placehold.it/300x300?text=6">
+            </div>
+        </section>
+        <button class="btn btn-cta">
+            Participar
+        </button>
+        <!-- <section class="row banner">
             <div class="container">
                 <img class="banner__image" src="../assets/images/wine-bottle.svg" alt="">
                 <button class="btn btn-cta">
                     Participar
                 </button>
             </div>
-        </section>
+        </section> -->
         <section class="row explanation">
             <div class="container">
                 <h2>¿Cómo funciona?</h2>
@@ -55,23 +120,55 @@
                 <p>O puedes elegir un paquete de opciones:</p>
                 <div class="item">
                     <h4>S/ 5</h4>
-                    <p>10 opciones de ganar</p>
+                    <p><b>10</b> opciones de ganar</p>
+                    <button class="btn btn-buy">Comprar</button>
                 </div>
                 <div class="item">
                     <h4>S/ 10</h4>
-                    <p>25 opciones de ganar</p>
+                    <p><b>25</b> opciones de ganar</p>
+                    <button class="btn btn-buy">Comprar</button>
                 </div>
                 <div class="item">
                     <h4>S/ 20</h4>
-                    <p>50 opciones de ganar</p>
+                    <p><b>50</b> opciones de ganar</p>
+                    <button class="btn btn-buy">Comprar</button>
                 </div>
             </div>
         </section>
+        
     </main>
     <footer>
         <div class="container">
             <p>Copyright © 2018 Sortragos. Todos los derechos reservados</p>
         </div>
     </footer>
+    <script src="../assets/js/bundle.js"></script>
+    <script type="text/javascript">
+        $(document).on('ready', function() {
+          $(".regular").slick({
+            dots: true,
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 3
+          });
+          $(".center").slick({
+            dots: true,
+            infinite: true,
+            centerMode: true,
+            slidesToShow: 5,
+            slidesToScroll: 3
+          });
+          $(".variable").slick({
+            dots: true,
+            infinite: true,
+            centerMode: true,
+            variableWidth: true
+          });
+          $(".lazy").slick({
+            lazyLoad: 'ondemand', // ondemand progressive anticipated
+            infinite: true
+          });
+        });
+    </script>
 </body>
 </html>
