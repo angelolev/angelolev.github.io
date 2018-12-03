@@ -1,0 +1,15 @@
+.av-banner {
+    background: $light-blue;
+    padding: 80px 0;
+    text-align: center;
+
+    h3 {
+        font: {
+            size: 28px;
+            weight: 600;
+        }
+        color: $white;
+        margin: 0;
+        line-height: 36px;
+    }
+}

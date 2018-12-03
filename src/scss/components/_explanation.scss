@@ -1,0 +1,28 @@
+.explanation {
+    background: $bg-gray;
+    padding: 50px 0;
+    text-align: center;
+
+    h2 {
+        font: {
+            size: 32px;
+            weight: 600;
+        }
+        margin: 0;
+    }
+
+    .item {
+        margin: 20px 0;
+        img {
+            max-width: 150px;
+        }
+
+        p {
+            font: {
+                size: 24px;
+                weight: normal;
+            }
+            margin: 20px auto;
+        }
+    }
+}

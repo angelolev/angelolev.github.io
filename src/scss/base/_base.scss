@@ -10,6 +10,10 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+img {
+    max-width: 100%;
+}
+
 sub, sup {
     font-size: 50%;
     top: -1em;
@@ -19,11 +23,6 @@ body {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: $text-size;
     color: $gray;
-    padding-top: 84px;
-
-    @include breakpoint($sm) {
-        padding-top: 78px;
-    }
 }
 
 section {
@@ -45,31 +44,10 @@ section {
     }
 }
 
-.call {
-    position: relative;
-
-    @include breakpoint($md) {
-        &:before {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            z-index: 7;
-        }
-    }
-}
-
-.phone {
-    color: $blue;
-    display: inline-block;
-}
-
 .btn {
-    background: $dark-orange;
+    background: $light-blue;
     font-family: $secondary-font-bold;
-    border-radius: 60px;
+    border-radius: 10px;
     color: $white;
     display: block;
 
@@ -78,11 +56,10 @@ section {
         weight: bold;
     }
 
-    margin: 0 auto;
-    padding: 14px 0;
+    margin: 20px auto 0;
+    padding: 10px 0;
     text-transform: uppercase;
-    width: 250px;
-    height: 56px;
+    width: 200px;
 
     &:focus {
         outline: none;
@@ -94,12 +71,6 @@ section {
     }
 }
 
-input, select, textarea {
-    font-family: $secondary-font;
-}
-
-.has-shadow {
-    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.42);
-    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.42);
-    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.42);
+.row {
+    margin: 0;
 }
