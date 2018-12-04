@@ -3,6 +3,10 @@
     padding: 80px 0;
     text-align: center;
 
+    @include breakpoint($sm) {
+        padding: 20px 0;
+    }
+
     h3 {
         font: {
             size: 28px;
@@ -11,5 +15,9 @@
         color: $white;
         margin: 0;
         line-height: 36px;
+
+        @include breakpoint($sm) {
+            font-size: 22px;
+        }
     }
 }

@@ -65,10 +65,10 @@
                 <img src="../assets/images/tequila.jpg">
             </div>
             <div>
-                <img src="http://placehold.it/300x300?text=5">
+                <img src="../assets/images/jack-daniels.jpg">
             </div>
             <div>
-                <img src="http://placehold.it/300x300?text=6">
+                <img src="../assets/images/black-label.jpg">
             </div>
         </section>
         <button class="btn btn-cta">
@@ -106,8 +106,12 @@
         </section>
         <section class="row options-banner">
             <div class="container">
-                <img src="../assets/images/bottle-options.svg" alt="">
-                <p>A más opciones más posibilidades de ganar</p>
+                <div class="col-xs-12 col-sm-6">
+                    <img src="../assets/images/bottle-options.svg" alt="">
+                </div>
+                <div class="col-xs-12 col-sm-6">
+                    <p>A más opciones más posibilidades de ganar</p>
+                </div>
             </div>
         </section>
         <section class="row av-banner">
@@ -118,20 +122,38 @@
         <section class="row bottom-banner">
             <div class="container">
                 <p>O puedes elegir un paquete de opciones:</p>
-                <div class="item">
-                    <h4>S/ 5</h4>
-                    <p><b>10</b> opciones de ganar</p>
-                    <button class="btn btn-buy">Comprar</button>
+                <div class="col-xs-12 col-sm-4">
+                    <header>
+                        <small>Paquete</small>
+                        <h3>No hay pierde!</h3>
+                    </header>
+                    <div class="item">
+                        <h4>S/ 5</h4>
+                        <p><b>10</b> opciones de ganar</p>
+                        <button class="btn btn-buy">Comprar</button>
+                    </div>
                 </div>
-                <div class="item">
-                    <h4>S/ 10</h4>
-                    <p><b>25</b> opciones de ganar</p>
-                    <button class="btn btn-buy">Comprar</button>
+                <div class="col-xs-12 col-sm-4">
+                    <header>
+                        <small>Paquete</small>
+                        <h3>Me lo llevo!</h3>
+                    </header>
+                    <div class="item">
+                        <h4>S/ 10</h4>
+                        <p><b>25</b> opciones de ganar</p>
+                        <button class="btn btn-buy">Comprar</button>
+                    </div>
                 </div>
-                <div class="item">
-                    <h4>S/ 20</h4>
-                    <p><b>50</b> opciones de ganar</p>
-                    <button class="btn btn-buy">Comprar</button>
+                <div class="col-xs-12 col-sm-4">
+                    <header>
+                        <small>Paquete</small>
+                        <h3>Gano si o si!</h3>
+                    </header>
+                    <div class="item">
+                        <h4>S/ 20</h4>
+                        <p><b>50</b> opciones de ganar</p>
+                        <button class="btn btn-buy">Comprar</button>
+                    </div>
                 </div>
             </div>
         </section>
@@ -145,28 +167,11 @@
     <script src="../assets/js/bundle.js"></script>
     <script type="text/javascript">
         $(document).on('ready', function() {
-          $(".regular").slick({
-            dots: true,
-            infinite: true,
-            slidesToShow: 3,
-            slidesToScroll: 3
-          });
-          $(".center").slick({
-            dots: true,
-            infinite: true,
-            centerMode: true,
-            slidesToShow: 5,
-            slidesToScroll: 3
-          });
           $(".variable").slick({
-            dots: true,
+            dots: false,
             infinite: true,
             centerMode: true,
             variableWidth: true
-          });
-          $(".lazy").slick({
-            lazyLoad: 'ondemand', // ondemand progressive anticipated
-            infinite: true
           });
         });
     </script>

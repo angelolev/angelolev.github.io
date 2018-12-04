@@ -8,7 +8,7 @@
             size: 32px;
             weight: 600;
         }
-        margin: 0;
+        margin: 0 0 30px;
     }
 
     .item {
@@ -19,10 +19,14 @@
 
         p {
             font: {
-                size: 24px;
+                size: 22px;
                 weight: normal;
             }
             margin: 20px auto;
+
+            @include breakpoint($sm) {
+                font-size: 18px;
+            }
         }
     }
 }

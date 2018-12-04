@@ -1,6 +1,6 @@
 {
   "input": {
-    "sass": "src/scss/styles.scss",
+    "sass": "src/scss/**",
     "js": [
       "src/js/jquery-1.12.4.min.js",
       "src/js/bootstrap.min.js",
