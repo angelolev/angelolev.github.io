@@ -19,10 +19,11 @@
 
         p {
             font: {
-                size: 22px;
+                size: 18px;
                 weight: normal;
             }
             margin: 20px auto;
+            max-width: 180px;
 
             @include breakpoint($sm) {
                 font-size: 18px;

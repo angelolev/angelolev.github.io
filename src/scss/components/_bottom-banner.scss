@@ -55,11 +55,9 @@
         margin-bottom: 50px;
         min-height: 200px;
         padding: 10px;
-        transition: all 300ms ease;
 
         &:hover {
             box-shadow: 0 14px 56px -20px rgba(0,0,0,.64);
-            transform: scale(1.03);
         }
 
         h4 {
@@ -86,6 +84,15 @@
             @include breakpoint($sm) {
                 font-size: 16px;
             }
+        }
+    }
+
+    .plan {
+        
+        transition: all 300ms ease;
+
+        &:hover {
+            transform: scale(1.03);
         }
     }
 }

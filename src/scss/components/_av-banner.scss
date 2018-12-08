@@ -1,6 +1,6 @@
 .av-banner {
-    background: $light-blue;
-    padding: 80px 0;
+    background: #2980b9;
+    padding: 60px 0;
     text-align: center;
 
     @include breakpoint($sm) {
@@ -9,7 +9,7 @@
 
     h3 {
         font: {
-            size: 28px;
+            size: 22px;
             weight: 600;
         }
         color: $white;

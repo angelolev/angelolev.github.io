@@ -1,0 +1,246 @@
+.component__nav {
+    background: $white;
+    border-bottom: 1px solid #f9f9f9;
+    z-index: 10;
+
+    .container {
+        @include breakpoint($lg) {
+            width: 100%;
+        }
+    }
+
+    .phoneNumber, .navbar-brand {
+        display: inline-block;
+    }
+
+    .logo {
+        float: left;
+        margin: 17px 0;
+
+        @include breakpoint($sm) {
+            margin: 15px 0;
+        }
+
+        .icon-logo {
+            color: $light-blue;
+            font-size: 44px;
+            vertical-align: middle;
+
+            @include breakpoint($sm) {
+                font-size: 50px;
+            }
+        }
+    }
+
+    .nav-toggle {
+        margin: 20px 10px 0 0;
+        float: left;
+
+        @include breakpoint($xxs) {
+            margin: 20px 20px 0 0;
+        }
+
+        @include breakpoint($sm) {
+            margin: 20px 30px 0 0;
+        }
+
+        .toggle {
+            color: $light-blue;
+            text-align: center;
+            cursor: pointer;
+
+            span {
+                background: $light-blue;
+                border-radius: 6px;
+                display: block;
+                width: 36px;
+                height: 3px;
+                margin: 0px auto 6px;
+
+                @include breakpoint($xxs) {
+                    width: 41px;
+                }
+            }
+
+            .menu-title {
+                font: {
+                    size: 12px;
+                    weight: $bold;
+                }
+
+                line-height: 18px;
+                text-transform: uppercase;
+                margin: -2px 0px 0px;
+
+                @include breakpoint($xxs) {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .menu {
+        background: $dark-gray;
+        font-family: $secondary-font-bold;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: -999px;
+        z-index: 99;
+        opacity: 0;
+        transition: all 0.4s ease, padding 0.2s ease;
+
+        @include breakpoint($md) {
+            background: transparent;
+            text-align: center;
+            opacity: 1;
+            margin-right: 10px;
+            position: initial;
+        }
+
+        .menu-header {
+            overflow: hidden;
+
+            .menu-close {
+                color: $white;
+                padding: 10px 12px;
+                cursor: pointer;
+                display: inline-block;
+            }
+        }
+
+        .menu-content {
+            .navbar-nav {
+                float: none;
+                margin: 22px 0;
+
+                @include breakpoint($md) {
+                    margin: 0;
+                    display: inline-block;
+                }
+
+                @include breakpoint(1280px) {
+                    margin-left: 152px;
+                }
+
+                li {
+                    float: none;
+
+                    @include breakpoint($md) {
+                        float: left;
+                    }
+
+                    &.active {
+                        a {
+                            text-decoration: underline;
+                        }
+                    }
+
+                    a {
+                        font-size: 18px;
+                        letter-spacing: 1.14px;
+                        color: $white;
+                        line-height: 21px;
+                        text-transform: uppercase;
+                        padding: 20px 35px 20px;
+
+                        @include breakpoint($md) {
+                            font-size: 15px;
+                            color: $dark-gray;
+                            padding: 34px 10px 20px;
+                        }
+
+                        @include breakpoint($lg) {
+                            font-size: 18px;
+                            padding: 34px 20px 20px;
+                        }
+
+                        &:after {
+                            font: {
+                                size: 16px;
+                                weight: bold;
+                            }
+
+                            content: ">";
+                            margin-left: 5px;
+                            vertical-align: top;
+
+                            @include breakpoint($md) {
+                                content: "";
+                            }
+                        }
+
+                        &:focus, &:hover {
+                            background: transparent;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.open {
+            max-width: 340px;
+            width: 100%;
+            left: 0;
+            opacity: 1;
+
+            @include breakpoint($md) {
+                max-width: 100%;
+                width: auto;
+            }
+        }
+    }
+
+    .phoneNumber {
+        float: right;
+        margin: 0;
+        max-width: 180px;
+
+        @include breakpoint($sm) {
+            display: none;
+        }
+
+        .btn {
+            &.btn-nav {
+                font-size: 13px;
+                padding: 11px 0;
+                width: 150px;
+                height: 44px;
+
+                @include breakpoint($xxs) {
+                    width: 130px;
+                }
+
+                span {
+                    vertical-align: middle;
+                }
+
+                .icon {
+                    font-size: 20px;
+                    margin-left: 4px;
+                }
+            }
+        }
+
+        .call {
+            span {
+                color: $dark-orange;
+
+                font: {
+                    size: 28px;
+                    weight: bold;
+                }
+
+                line-height: 36px;
+
+                @include breakpoint($md) {
+                    font-size: 24px;
+                }
+
+                @include breakpoint($lg) {
+                    font-size: 28px;
+                }
+            }
+        }
+    }
+}

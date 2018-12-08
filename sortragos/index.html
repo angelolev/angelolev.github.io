@@ -50,23 +50,34 @@
       </style>
 </head>
 <body>
-    <!-- Load Facebook SDK for JavaScript -->
-    <div id="fb-root"></div>
-    <script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = 'https://connect.facebook.net/es_ES/sdk/xfbml.customerchat.js';
-    fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
-
-    <!-- Your customer chat code -->
-    <div class="fb-customerchat"
-    attribution=setup_tool
-    page_id="247345239306879"
-    logged_in_greeting="Hola!, como puedo ayudarte?"
-    logged_out_greeting="Hola!, como puedo ayudarte?">
-    </div>
+    <nav class="component__nav navbar navbar-fixed-top">
+        <div class="container">
+            <div class="nav-toggle visible-xs visible-sm">
+                <div id="toggle" class="toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <p class="menu-title">Menu</p>
+                </div>
+            </div>
+            <a class="logo" href="/"><i class="icon icon-logo"></i></a>
+            <div class="phoneNumber">
+                <button class="btn btn-nav visible-xs btn-cta">Participar</button>
+            </div>
+            <div id="menu" class="menu">
+                <div class="menu-header visible-xs visible-sm">
+                    <div class="menu-close">X</div>
+                </div>
+                <div class="menu-content">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#explanation">Cómo funciona</a></li>
+                        <li><a href="#options">Opciones de ganar</a></li>
+                        <li><a href="#raffles">Sorteos</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
     <main>
         <section class="row variable slider">
             <div>
@@ -91,15 +102,7 @@
         <button class="btn btn-cta">
             Participar
         </button>
-        <!-- <section class="row banner">
-            <div class="container">
-                <img class="banner__image" src="../assets/images/wine-bottle.svg" alt="">
-                <button class="btn btn-cta">
-                    Participar
-                </button>
-            </div>
-        </section> -->
-        <section class="row explanation">
+        <section class="row explanation" id="explanation">
             <div class="container">
                 <h2>¿Cómo funciona?</h2>
                 <div class="col-xs-12 col-sm-4 item">
@@ -136,10 +139,10 @@
                     <h3>Todos los sorteos son transmitidos vía FB Live!</h3>
                 </div>
             </section>
-        <section class="row bottom-banner">
+        <section class="row bottom-banner" id="options">
             <div class="container">
                 <p>O puedes elegir un paquete de opciones:</p>
-                <div class="col-xs-12 col-sm-4">
+                <div class="col-xs-12 col-sm-4 plan">
                     <header>
                         <small>Paquete</small>
                         <h3>No hay pierde!</h3>
@@ -150,7 +153,7 @@
                         <button class="btn btn-buy">Comprar</button>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-4">
+                <div class="col-xs-12 col-sm-4 plan">
                     <header>
                         <small>Paquete</small>
                         <h3>Me lo llevo!</h3>
@@ -161,7 +164,7 @@
                         <button class="btn btn-buy">Comprar</button>
                     </div>
                 </div>
-                <div class="col-xs-12 col-sm-4">
+                <div class="col-xs-12 col-sm-4 plan">
                     <header>
                         <small>Paquete</small>
                         <h3>Gano si o si!</h3>
@@ -174,13 +177,31 @@
                 </div>
             </div>
         </section>
-        
+        <section id="raffles">
+
+        </section>
     </main>
     <footer>
         <div class="container">
-            <p>Copyright © 2018 Sortragos. Todos los derechos reservados</p>
+          <div class="row text-center">
+            <div class="col">
+              <h3>Sortragos</h3>
+              <p>Av Cuba 926<br>Jesus Maria, Lima</p>
+              <p>Peru</p>
+              <p>+51 952719643</p>
+            </div>
+          </div>
+      
+          <div class="row">
+            <div class="col text-center">
+              <p class="lead">
+                <a href="https://www.facebook.com/sortragos"><i class="icon icon-facebook" aria-hidden="true"></i></a>
+                <a href="https://www.instagram.com/sortragos"><i class="icon icon-instagram" aria-hidden="true"></i></a>
+              </p>
+            </div>
+          </div>
         </div>
-    </footer>
+      </footer>
     <script src="../assets/js/bundle.js"></script>
     <script type="text/javascript">
         $(document).on('ready', function() {

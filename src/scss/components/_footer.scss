@@ -2,10 +2,37 @@ footer {
     background: $gray;
     padding: 65px 0;
 
+    h3 {
+        color: $white;
+        font-weight: 600;
+    }
+
+    a {
+        color: $white;
+        text-decoration: none;
+
+        &:hover {
+            color: $white;
+        }
+    }
+
     p {
         font: {
             size: 16px;
         }
-        color: $white;
+        color: #8698a9;
+    }
+
+    .footer__content {
+        text-align: center;
+
+        @include breakpoint($md) {
+            text-align: left;
+        }
+    }
+
+    .icon {
+        font-size: 20px;
+        margin: 0 5px;
     }
 }
