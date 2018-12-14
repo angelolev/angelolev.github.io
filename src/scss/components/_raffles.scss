@@ -1,0 +1,67 @@
+.raffles {
+    background: $bg-gray;
+    padding: 50px 0;
+    text-align: center;
+
+    .raffle {
+        border: 1px solid #c6ced8;
+        border-radius: 6px;
+        max-width: 600px;
+        margin: 0 auto 30px;
+        padding: 10px 0;
+        text-align: center;
+
+        @include breakpoint($sm) {
+            text-align: left;
+        }
+    }
+
+    h2 {
+        margin-bottom: 30px;
+    }
+
+    img {
+        max-width: 85px;
+
+        @include breakpoint($sm) {
+            display: inline-block;
+        }
+    }
+
+    p {
+        font-size: 16px;
+        @include breakpoint($sm) {
+            display: inline-block;
+        }
+
+        a {
+            color: #00a4e4;
+
+            &.disabled {
+                color: #879297;
+                text-decoration: line-through;
+            }
+        }
+
+        span {
+            color: $white;
+            font-size: 10px;
+            padding: 5px;
+            border-radius: 10px;
+
+            &.soon {
+                background: #e74c3c;
+            }
+
+            &.date {
+                background: #27ae60;
+            }
+            
+            
+
+            @include breakpoint($sm) {
+                margin-left: 20px;
+            }
+        }
+    }
+}

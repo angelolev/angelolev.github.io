@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sortragos</title>
     <link rel="stylesheet" href="../assets/css/bundle.css">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
     <style type="text/css">
         html, body {
           margin: 0;
@@ -60,9 +61,9 @@
                     <p class="menu-title">Menu</p>
                 </div>
             </div>
-            <a class="logo" href="/"><i class="icon icon-logo"></i></a>
+            <a class="logo" href="/"><img src="../assets/images/sortrago.png" /></a>
             <div class="phoneNumber">
-                <button class="btn btn-nav visible-xs btn-cta">Participar</button>
+                <button class="btn btn-nav visible-xs btn-cta" data-toggle="modal" data-target="#modalExplanation">Participar</button>
             </div>
             <div id="menu" class="menu">
                 <div class="menu-header visible-xs visible-sm">
@@ -79,28 +80,51 @@
         </div>
     </nav>
     <main>
-        <section class="row variable slider">
-            <div>
-                <img src="../assets/images/jack-daniels.jpg">
-            </div>
-            <div>
-                <img src="../assets/images/black-label.jpg">
-            </div>
-            <div>
-                <img src="../assets/images/baileys.jpg">
-            </div>
-            <div>
-                <img src="../assets/images/tequila.jpg">
-            </div>
-            <div>
-                <img src="../assets/images/jack-daniels.jpg">
-            </div>
-            <div>
-                <img src="../assets/images/black-label.jpg">
+        <section class="top-banner">
+            <img src="../assets/images/barrel.svg" />
+            <p>Llévate los</p>
+            <h1>MEJORES TRAGOS POR EL MíNIMO COSTO</h1>
+            <p>Participa!</p>
+        </section>
+        <section class="row categories">
+            <div class="container text-center">
+                <h2>¿Qué tragos sorteamos?</h2>
+                <div class="col-xs-6 col-sm-3 item">
+                    <img src="https://img.icons8.com/cotton/50/000000/whiskey.png">
+                    <p>Whiskey</p>
+                </div>
+                <div class="col-xs-6 col-sm-3 item">
+                    <img src="https://img.icons8.com/cotton/50/000000/alcohol.png">
+                    <p>Jaggermeister</p>
+                </div>
+                <div class="col-xs-6 col-sm-3 item">
+                    <img src="https://img.icons8.com/color/50/000000/vodka.png">
+                    <p>Vodka</p>
+                </div>
+                <div class="col-xs-6 col-sm-3 item">
+                    <img src="https://img.icons8.com/color/50/000000/wine-bottle.png">
+                    <p>Vino</p>
+                </div>
+                <div class="col-xs-6 col-sm-3 item">
+                    <img src="https://img.icons8.com/color/50/000000/beer-bottle.png">
+                    <p>Chelas</p>
+                </div>
+                <div class="col-xs-6 col-sm-3 item">
+                    <img src="https://img.icons8.com/cotton/64/000000/the-toast.png">
+                    <p>Champagne</p>
+                </div>
+                <div class="col-xs-6 col-sm-3 item">
+                    <img src="https://img.icons8.com/cotton/50/000000/tequila-shot.png">
+                    <p>Tequila</p>
+                </div>
+                <div class="col-xs-6 col-sm-3 item">
+                    <img src="https://img.icons8.com/cotton/64/000000/olive-oil.png">
+                    <p>Pisco</p>
+                </div>
             </div>
         </section>
-        <button class="btn btn-cta">
-            Participar
+        <button class="btn btn-cta" data-toggle="modal" data-target="#modalExplanation">
+            Los quiero!
         </button>
         <section class="row explanation" id="explanation">
             <div class="container">
@@ -150,7 +174,7 @@
                     <div class="item">
                         <h4>S/ 5</h4>
                         <p><b>10</b> opciones de ganar</p>
-                        <button class="btn btn-buy">Comprar</button>
+                        <button class="btn btn-buy" data-toggle="modal" data-target="#modalExplanation">Comprar</button>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-4 plan">
@@ -161,7 +185,7 @@
                     <div class="item">
                         <h4>S/ 10</h4>
                         <p><b>25</b> opciones de ganar</p>
-                        <button class="btn btn-buy">Comprar</button>
+                        <button class="btn btn-buy" data-toggle="modal" data-target="#modalExplanation">Comprar</button>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-4 plan">
@@ -172,13 +196,42 @@
                     <div class="item">
                         <h4>S/ 20</h4>
                         <p><b>50</b> opciones de ganar</p>
-                        <button class="btn btn-buy">Comprar</button>
+                        <button class="btn btn-buy" data-toggle="modal" data-target="#modalExplanation">Comprar</button>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="raffles">
-
+        <section id="raffles" class="raffles">
+            <div class="container">
+                <div class="row text-center">
+                    <h2>Próximos Sorteos</h2>
+                    <div class="raffle">
+                        <img src="../assets/images/trophy.svg" />
+                        <p><a target="_blank" href="https://www.facebook.com/events/1375195432615873/">01 Johnnie Walker Double Black 750ml</a></p>
+                        <p><span class="date">05 Ene 2019</span></p>
+                    </div>
+                    <div class="raffle">
+                        <img src="../assets/images/trophy.svg" />
+                        <p><a class="disabled" href="#raffles">01 Jack Daniels 750 ml</a></p>
+                        <p><span class="soon">12 Ene 2019</span></p>
+                    </div>
+                    <div class="raffle">
+                        <img src="../assets/images/trophy.svg" />
+                        <p><a class="disabled" href="#raffles">01 Licor de Crema BAILEYS 750ml</a></p>
+                        <p><span class="soon">19 Ene 2019</span></p>
+                    </div>
+                    <div class="raffle">
+                        <img src="../assets/images/trophy.svg" />
+                        <p><a class="disabled" href="#raffles">01 Whisky OLD PARR 12 Años 750ml</a></p>
+                        <p><span class="soon">26 Ene 2019</span></p>
+                    </div>
+                    <div class="raffle">
+                        <img src="../assets/images/trophy.svg" />
+                        <p><a class="disabled" href="#raffles">01 Licor JÄGERMEISTER HERB LIQUEUR 700ml</a></p>
+                        <p><span class="soon">Próximamente</span></p>
+                    </div>   
+                </div>
+            </div>
         </section>
     </main>
     <footer>
@@ -186,7 +239,7 @@
           <div class="row text-center">
             <div class="col">
               <h3>Sortragos</h3>
-              <p>Av Cuba 926<br>Jesus Maria, Lima</p>
+              <p>Copyright © Sortragos 2018 - Todos los derechos reservados</p>
               <p>Peru</p>
               <p>+51 952719643</p>
             </div>
@@ -213,5 +266,36 @@
           });
         });
     </script>
+    <!-- Modal -->
+    <div class="modal fade" id="modalExplanation" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">Como participar?</h4>
+            </div>
+            <div class="modal-body">
+            <p>Para poder adquirir tus opciones, deberás realizar el pago de estas vía Interbank App, Transferencia bancaria o interbancaria a:</p>
+            <ul>
+                <li>Código de cuenta interbancario: <b>00308701308349748544</b></p></li>
+                <li>Cuenta Interbank de Ahorro Soles: <b>0873083497485</b></li>
+            </ul>
+            <p>Recuerda que cada opción tiene el costo de <b>S/ 1 sol</b>.</p>
+            <p>Luego de efectuar el pago, envíanos una foto del voucher por las siguientes vías:</p>
+            <ul>
+                <li><a href="m.me/sortragos">Facebook Messenger</a></li>
+                <li>Email: <b>hola@sortragos.com</b></li>
+            </ul>
+            <p>En unos minutos, recibirás un correo/mensaje con tu ticket de opciones para el sorteo actual, un ticket muy similar a éste:</p>
+            <img src="../assets/images/sortragos-ticket.png" />
+            <p>El ticket indica el producto que se sortea, fecha y hora del sorteo.</p>
+            <p><b>NOTA IMPORTANTE:</b> Desde el 17 de Diciembre de 2018 hasta el 17 de Enero de 2019, todas las opciones que adquieras, se <b>TRIPLICARAN!</b></p>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+        </div>
+    </div>
 </body>
 </html>

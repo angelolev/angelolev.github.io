@@ -3,31 +3,23 @@
     border-bottom: 1px solid #f9f9f9;
     z-index: 10;
 
-    .container {
-        @include breakpoint($lg) {
-            width: 100%;
-        }
-    }
-
     .phoneNumber, .navbar-brand {
         display: inline-block;
     }
 
     .logo {
         float: left;
-        margin: 17px 0;
+        margin: 20px 0;
 
-        @include breakpoint($sm) {
-            margin: 15px 0;
-        }
+        img {
+            max-width: 140px;
 
-        .icon-logo {
-            color: $light-blue;
-            font-size: 44px;
-            vertical-align: middle;
+            @include breakpoint($xxs) {
+                max-width: 130px;
+            }
 
-            @include breakpoint($sm) {
-                font-size: 50px;
+            @include breakpoint(425px) {
+                max-width: 160px;
             }
         }
     }
@@ -204,11 +196,12 @@
             &.btn-nav {
                 font-size: 13px;
                 padding: 11px 0;
-                width: 150px;
-                height: 44px;
+                width: 90px;
+                height: 40px;
 
                 @include breakpoint($xxs) {
-                    width: 130px;
+                    width: 150px;
+                    height: 44px;
                 }
 
                 span {
