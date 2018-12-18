@@ -4,51 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Llevate los mejores tragos al minimo costo. Comunidad de gente que le gustan los tragos y participan por llevarse uno cada semana, en una modalidad de sorteo.">
+    <meta name="keywords" content="trago, trago lima, bebidas lima, sorteo de tragos, bebida fin de semana">
+    <meta name="author" content="">
     <title>Sortragos</title>
     <link rel="stylesheet" href="../assets/css/bundle.css">
     <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
-    <style type="text/css">
-        html, body {
-          margin: 0;
-          padding: 0;
-        }
-    
-        * {
-          box-sizing: border-box;
-        }
-    
-        .slider {
-            width: 75%;
-            margin: 30px auto 0;
-        }
-    
-        .slick-slide {
-          margin: 0px 20px;
-        }
-    
-        .slick-slide img {
-          max-width: 200px;
-        }
-    
-        .slick-prev:before,
-        .slick-next:before {
-          color: black;
-        }
-    
-    
-        .slick-slide {
-          transition: all ease-in-out .3s;
-          opacity: .2;
-        }
-        
-        .slick-active {
-          opacity: .5;
-        }
-    
-        .slick-current {
-          opacity: 1;
-        }
-      </style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131063668-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-131063668-1');
+    </script>
+
 </head>
 <body>
     <nav class="component__nav navbar navbar-fixed-top">
@@ -84,7 +55,9 @@
             <img src="../assets/images/barrel.svg" />
             <p>Llévate los</p>
             <h1>MEJORES TRAGOS POR EL MíNIMO COSTO</h1>
-            <p>Participa!</p>
+            <button class="btn btn-cta" data-toggle="modal" data-target="#modalExplanation">
+                Participa
+            </button>
         </section>
         <section class="row categories">
             <div class="container text-center">
@@ -165,7 +138,7 @@
             </section>
         <section class="row bottom-banner" id="options">
             <div class="container">
-                <p>O puedes elegir un paquete de opciones:</p>
+                <h2>Paquetes de Opciones</h2>
                 <div class="col-xs-12 col-sm-4 plan">
                     <header>
                         <small>Paquete</small>
@@ -240,8 +213,6 @@
             <div class="col">
               <h3>Sortragos</h3>
               <p>Copyright © Sortragos 2018 - Todos los derechos reservados</p>
-              <p>Peru</p>
-              <p>+51 952719643</p>
             </div>
           </div>
       
@@ -277,19 +248,21 @@
             <div class="modal-body">
             <p>Para poder adquirir tus opciones, deberás realizar el pago de estas vía Interbank App, Transferencia bancaria o interbancaria a:</p>
             <ul>
-                <li>Código de cuenta interbancario: <b>00308701308349748544</b></p></li>
-                <li>Cuenta Interbank de Ahorro Soles: <b>0873083497485</b></li>
+                <li><p>Cuenta BCP Soles: <b>193-927389780-32</b></p></li>
+                <li><p>Yape: <b>952719643</b></p></li>
+                <li><p>Cuenta Interbank Soles: <b>087-30834974-85</b></p></li>
+                <li><p>Cuenta BBVA Soles: <b>0011-0960-24-0200123115</b></p></li>
             </ul>
             <p>Recuerda que cada opción tiene el costo de <b>S/ 1 sol</b>.</p>
             <p>Luego de efectuar el pago, envíanos una foto del voucher por las siguientes vías:</p>
             <ul>
-                <li><a href="m.me/sortragos">Facebook Messenger</a></li>
+                <li><a href="http://m.me/sortragos">Facebook Messenger</a></li>
                 <li>Email: <b>hola@sortragos.com</b></li>
             </ul>
             <p>En unos minutos, recibirás un correo/mensaje con tu ticket de opciones para el sorteo actual, un ticket muy similar a éste:</p>
             <img src="../assets/images/sortragos-ticket.png" />
             <p>El ticket indica el producto que se sortea, fecha y hora del sorteo.</p>
-            <p><b>NOTA IMPORTANTE:</b> Desde el 17 de Diciembre de 2018 hasta el 17 de Enero de 2019, todas las opciones que adquieras, se <b>TRIPLICARAN!</b></p>
+            <p><small><b>NOTA IMPORTANTE:</b> Desde el 17 de Diciembre de 2018 hasta el 17 de Enero de 2019, todas las opciones que adquieras, se <b>TRIPLICARAN!</b></small></p>
             </div>
             <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>

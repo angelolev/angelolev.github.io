@@ -49,9 +49,10 @@ section {
 }
 
 .btn {
-    background: $light-blue;
+    background: #2ecc71;
     font-family: $secondary-font-bold;
     border-radius: 10px;
+    border-bottom: 3px solid #68a968;
     color: $white;
     cursor: pointer;
     display: block;

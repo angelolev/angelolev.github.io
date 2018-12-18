@@ -5,8 +5,7 @@
       "src/js/jquery-1.12.4.min.js",
       "src/js/bootstrap.min.js",
       "src/js/_functions.js",
-      "src/js/_lazy-loading.js",
-      "src/js/slick.min.js"
+      "src/js/_lazy-loading.js"
     ],
     "images": "src/images/**",
     "fonts": "src/fonts/*"
