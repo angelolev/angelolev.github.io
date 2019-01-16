@@ -11,11 +11,12 @@ const gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     gulpif = require('gulp-if'),
     config = require('./config.json'),
+    babel = require('gulp-babel');
     helpers = require('./src/functions/helpers');
 
 require('./src/functions/clean')(config, gulp, clean);
 require('./src/functions/css-build')(config, gulp, sass, autoprefixer, cssnano, concat, cleanCSS, helpers, sourcemaps, gulpif, styleLint);
-require('./src/functions/js-build')(config, gulp, concat, uglify, helpers, gulpif, sourcemaps);
+require('./src/functions/js-build')(config, gulp, concat, uglify, helpers, gulpif, sourcemaps, babel);
 require('./src/functions/images-build')(config, gulp, imagemin);
 require('./src/functions/copy-fonts')(config, gulp);
 require('./src/functions/lg-prod')(config, gulp);

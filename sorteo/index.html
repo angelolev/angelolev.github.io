@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Llevate los mejores tragos al minimo costo. Comunidad de gente que le gustan los tragos y participan por llevarse uno cada semana, en una modalidad de sorteo.">
+    <meta name="keywords" content="trago, trago lima, bebidas lima, sorteo de tragos, bebida fin de semana">
+    <meta name="author" content="">
+    <title>Sortragos</title>
+    <link rel="stylesheet" href="../assets/css/bundle.css">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131063668-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-131063668-1');
+    </script>
+</head>
+<body>
+    <nav class="component__nav navbar navbar-fixed-top">
+        <div class="container">
+            <div class="nav-toggle visible-xs visible-sm">
+                <div id="toggle" class="toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <p class="menu-title">Menu</p>
+                </div>
+            </div>
+            <a class="logo" href="/"><img src="../assets/images/sortrago.png" /></a>
+            <div class="phoneNumber">
+                <button class="btn btn-nav visible-xs btn-cta" data-toggle="modal" data-target="#modalExplanation">Participar</button>
+            </div>
+            <div id="menu" class="menu">
+                <div class="menu-header visible-xs visible-sm">
+                    <div class="menu-close">X</div>
+                </div>
+                <div class="menu-content">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#explanation">Cómo funciona</a></li>
+                        <li><a href="#options">Opciones de ganar</a></li>
+                        <li><a href="#raffles">Sorteos</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <section class="row live-raffle">
+            <div class="container">
+                <h1>Primer sortrago</h1>
+                <p>El premio de hoy es:</p>
+                <div class="prize">
+                    <img src="https://img.icons8.com/cotton/50/000000/whiskey.png">
+                    <h2>01 Johnnie Walker Double Black 750 ml</h2>
+                </div>
+                <p>Total de opciones para el sorteo: <span id="options"></span></p>
+                <button class="btn btn-cta" onclick="getResult()">Sortear!</button>
+                <p>Opcion ganadora: <span id="winner"></span></p>
+            </div>
+        </section>
+    </main>
+    <script src="../assets/js/bundle.js"></script>
+    <script>
+        var optionsList = [];
+        var peopleList = [
+    {
+        id: 1,
+        name: 'Jairo Aldana',
+        options: 30,
+        init: 10134,
+        numeros: []
+    },
+    {
+        id: 2,
+        name: 'Diego Briceno',
+        options: 75,
+        init: 10165,
+        numeros: []
+    },
+    {
+        id: 3,
+        name: 'Jo Sue Yep',
+        options: 3,
+        init: 10272,
+        numeros: []
+    },
+    {
+        id: 4,
+        name: 'Christian Leon',
+        options: 30,
+        init: 10241,
+        numeros: []
+    },
+    {
+        id: 5,
+        name: 'Jorge Nizama',
+        options: 12,
+        init: 10276,
+        numeros: []
+    },
+    {
+        id: 6,
+        name: 'Shirley Nizama',
+        options: 15,
+        init: 10288,
+        numeros: []
+    },
+    {
+        id: 7,
+        name: 'Betty Leva',
+        options: 6,
+        init: 10303,
+        numeros: []
+    },
+    {
+        id: 8,
+        name: 'Rajiv Toora',
+        options: 75,
+        init: 10309,
+        numeros: []
+    },
+    {
+        id: 9,
+        name: 'Christian Perez',
+        options: 30,
+        init: 10385,
+        numeros: []
+    },
+    {
+        id: 10,
+        name: 'Victor Perez',
+        options: 30,
+        init: 10416,
+        numeros: []
+    },
+    {
+        id: 11,
+        name: 'Joao Tunque',
+        options: 30,
+        init: 10447,
+        numeros: []
+    },
+    {
+        id: 12,
+        name: 'Victor Vela',
+        options: 30,
+        init: 10478,
+        numeros: []
+    }
+
+]
+
+        function addOptions(person) {
+            let i;
+            for (i = person.init; i <= person.init + person.options; i++) { 
+            optionsList.push(i);
+            person.numeros.push(i);
+            }
+        }
+
+        peopleList.map(function (person, index){
+            addOptions(person);
+        })
+
+        Array.prototype.getWinner = function(){
+            return this[Math.floor(Math.random()*this.length)];
+        }
+
+        function getResult(){
+            let winner = optionsList.getWinner();
+            document.getElementById("winner").innerHTML = winner;
+        }
+
+        document.getElementById("options").innerHTML = optionsList.length;
+    </script>
+</body>
+</html>
