@@ -515,6 +515,7 @@ button.btn:hover {
 @media (min-width: 1200px) {
   .features__list .item .item__text {
     width: 100%;
+    padding: 20px 0;
   }
 }
 
