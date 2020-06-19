@@ -1,264 +1,197 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Llevate los mejores tragos al minimo costo. Comunidad de gente que le gustan los tragos y participan por llevarse uno cada semana, en una modalidad de sorteo.">
-    <meta name="keywords" content="trago, trago lima, bebidas lima, sorteo de tragos, bebida fin de semana">
-    <meta name="author" content="">
-    <title>Sortragos</title>
-    <link rel="stylesheet" href="assets/css/bundle.css">
-    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah" rel="stylesheet">
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131063668-1"></script>
-    <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-131063668-1');
-    </script>
-
-</head>
-<body>
-    <nav class="component__nav navbar navbar-fixed-top">
-        <div class="container">
-            <div class="nav-toggle visible-xs visible-sm">
-                <div id="toggle" class="toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <p class="menu-title">Menu</p>
-                </div>
-            </div>
-            <a class="logo" href="/"><img src="assets/images/sortrago.png" /></a>
-            <div class="phoneNumber">
-                <button class="btn btn-nav visible-xs btn-cta" data-toggle="modal" data-target="#modalExplanation">Participar</button>
-            </div>
-            <div id="menu" class="menu">
-                <div class="menu-header visible-xs visible-sm">
-                    <div class="menu-close">X</div>
-                </div>
-                <div class="menu-content">
-                    <ul class="nav navbar-nav">
-                        <li><a href="#explanation">Cómo funciona</a></li>
-                        <li><a href="#options">Opciones de ganar</a></li>
-                        <li><a href="#raffles">Sorteos</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </nav>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Angelo Leva | Frontend Dev</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <main>
-        <section class="top-banner">
-            <img src="assets/images/barrel.svg" />
-            <p>Llévate los</p>
-            <h1>MEJORES TRAGOS POR EL MíNIMO COSTO</h1>
-            <button class="btn btn-cta" data-toggle="modal" data-target="#modalExplanation">
-                Participa
-            </button>
-        </section>
-        <section class="row categories">
-            <div class="container text-center">
-                <h2>¿Qué tragos sorteamos?</h2>
-                <div class="col-xs-6 col-sm-3 item">
-                    <img src="https://img.icons8.com/cotton/50/000000/whiskey.png">
-                    <p>Whiskey</p>
-                </div>
-                <div class="col-xs-6 col-sm-3 item">
-                    <img src="https://img.icons8.com/cotton/50/000000/alcohol.png">
-                    <p>Jaggermeister</p>
-                </div>
-                <div class="col-xs-6 col-sm-3 item">
-                    <img src="https://img.icons8.com/color/50/000000/vodka.png">
-                    <p>Vodka</p>
-                </div>
-                <div class="col-xs-6 col-sm-3 item">
-                    <img src="https://img.icons8.com/color/50/000000/wine-bottle.png">
-                    <p>Vino</p>
-                </div>
-                <div class="col-xs-6 col-sm-3 item">
-                    <img src="https://img.icons8.com/color/50/000000/beer-bottle.png">
-                    <p>Chelas</p>
-                </div>
-                <div class="col-xs-6 col-sm-3 item">
-                    <img src="https://img.icons8.com/cotton/64/000000/the-toast.png">
-                    <p>Champagne</p>
-                </div>
-                <div class="col-xs-6 col-sm-3 item">
-                    <img src="https://img.icons8.com/cotton/50/000000/tequila-shot.png">
-                    <p>Tequila</p>
-                </div>
-                <div class="col-xs-6 col-sm-3 item">
-                    <img src="https://img.icons8.com/cotton/64/000000/olive-oil.png">
-                    <p>Pisco</p>
-                </div>
+      <nav class="nav">
+        <div class="nav__logo">
+          <img src="/src/images/logo.png" alt="Angelo Leva" />
+        </div>
+        <div class="nav__info">
+          <div class="nav__name">
+            <p>Angelo Leva</p>
+          </div>
+          <div class="nav__profile">
+            <p>Frontend Developer</p>
+          </div>
+          <div class="nav__contact">
+            <p>Call Me (+51)952719643 / hola@angeloleva.dev</p>
+          </div>
+        </div>
+      </nav>
+      <header class="header">
+        <h1>Angelo Leva</h1>
+        <h3>Front end Developer and Mentor</h3>
+        <p>
+          I design and build user interfaces
+        </p>
+        <a href="#contact" class="btn scrollable">Let's chat!</a>
+      </header>
+      <div class="box blue"></div>
+      <div class="container">
+        <section class="features" id="about">
+          <h2>What I Do</h2>
+          <div class="features__list">
+            <div class="item">
+              <div class="item__image">
+                <img src="/src/images/frontend.png" alt="" />
+              </div>
+              <div class="item__text">
+                <h3>Frontend Development</h3>
+                <p>
+                  I like to code things from scratch, and enjoy bringing ideas
+                  to life in the browser.
+                </p>
+              </div>
             </div>
-        </section>
-        <button class="btn btn-cta" data-toggle="modal" data-target="#modalExplanation">
-            Los quiero!
-        </button>
-        <section class="row explanation" id="explanation">
-            <div class="container">
-                <h2>¿Cómo funciona?</h2>
-                <div class="col-xs-12 col-sm-4 item">
-                    <img src="assets/images/wallet.svg" alt="">
-                    <p>Compra opciones para cada sorteo</p>
-                </div>
-                <div class="col-xs-12 col-sm-4 item">
-                    <img src="assets/images/contract.svg" alt="">
-                    <p>Inscríbete al sorteo de tu preferencia</p>
-                </div>
-                <div class="col-xs-12 col-sm-4 item">
-                    <img src="assets/images/trophy.svg" alt="">
-                    <p>Gana y llévate tu trago!</p>
-                </div>
+            <div class="item">
+              <div class="item__image">
+                <img src="/src/images/ux.png" alt="" />
+              </div>
+              <div class="item__text">
+                <h3>Designer</h3>
+                <p>
+                  I value simple content structure, clean design patterns, and
+                  thoughtful interactions.
+                </p>
+              </div>
             </div>
-        </section>
-        <section class="row av-banner">
-            <div class="container">
-                <h3>Cada opción tiene el costo de S/ 1 sol. Puedes comprar todas las opciones que quieras!</h3>
-            </div>
-        </section>
-        <section class="row options-banner">
-            <div class="container">
-                <div class="col-xs-12 col-sm-6">
-                    <img src="assets/images/bottle-options.svg" alt="">
-                </div>
-                <div class="col-xs-12 col-sm-6">
-                    <p>A más opciones más posibilidades de ganar</p>
-                </div>
-            </div>
-        </section>
-        <section class="row av-banner">
-                <div class="container">
-                    <h3>Todos los sorteos son transmitidos vía FB Live!</h3>
-                </div>
-            </section>
-        <section class="row bottom-banner" id="options">
-            <div class="container">
-                <h2>Paquetes de Opciones</h2>
-                <div class="col-xs-12 col-sm-4 plan">
-                    <header>
-                        <small>Paquete</small>
-                        <h3>No hay pierde!</h3>
-                    </header>
-                    <div class="item">
-                        <h4>S/ 5</h4>
-                        <p><b>10</b> opciones de ganar</p>
-                        <button class="btn btn-buy" data-toggle="modal" data-target="#modalExplanation">Comprar</button>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-4 plan">
-                    <header>
-                        <small>Paquete</small>
-                        <h3>Me lo llevo!</h3>
-                    </header>
-                    <div class="item">
-                        <h4>S/ 10</h4>
-                        <p><b>25</b> opciones de ganar</p>
-                        <button class="btn btn-buy" data-toggle="modal" data-target="#modalExplanation">Comprar</button>
-                    </div>
-                </div>
-                <div class="col-xs-12 col-sm-4 plan">
-                    <header>
-                        <small>Paquete</small>
-                        <h3>Gano si o si!</h3>
-                    </header>
-                    <div class="item">
-                        <h4>S/ 20</h4>
-                        <p><b>50</b> opciones de ganar</p>
-                        <button class="btn btn-buy" data-toggle="modal" data-target="#modalExplanation">Comprar</button>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="raffles" class="raffles">
-            <div class="container">
-                <div class="row text-center">
-                    <h2>Próximos Sorteos</h2>
-                    <div class="raffle">
-                        <img src="assets/images/trophy.svg" />
-                        <p><a target="_blank" href="https://www.facebook.com/events/1375195432615873/">01 Johnnie Walker Double Black 750ml</a></p>
-                        <p><span class="date">05 Ene 2019</span></p>
-                    </div>
-                    <div class="raffle">
-                        <img src="assets/images/trophy.svg" />
-                        <p><a class="disabled" href="#raffles">01 Jack Daniels 750 ml</a></p>
-                        <p><span class="soon">12 Ene 2019</span></p>
-                    </div>
-                    <div class="raffle">
-                        <img src="assets/images/trophy.svg" />
-                        <p><a class="disabled" href="#raffles">01 Licor de Crema BAILEYS 750ml</a></p>
-                        <p><span class="soon">19 Ene 2019</span></p>
-                    </div>
-                    <div class="raffle">
-                        <img src="assets/images/trophy.svg" />
-                        <p><a class="disabled" href="#raffles">01 Whisky OLD PARR 12 Años 750ml</a></p>
-                        <p><span class="soon">26 Ene 2019</span></p>
-                    </div>
-                    <div class="raffle">
-                        <img src="assets/images/trophy.svg" />
-                        <p><a class="disabled" href="#raffles">01 Licor JÄGERMEISTER HERB LIQUEUR 700ml</a></p>
-                        <p><span class="soon">Próximamente</span></p>
-                    </div>   
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <div class="container">
-          <div class="row text-center">
-            <div class="col">
-              <h3>Sortragos</h3>
-              <p>Copyright © Sortragos 2018 - Todos los derechos reservados</p>
+            <div class="item">
+              <div class="item__image">
+                <img src="/src/images/teach.png" alt="" />
+              </div>
+              <div class="item__text">
+                <h3>IT Training/Mentor</h3>
+                <p>
+                  I genuinely care about people, and love helping fellow
+                  developers work on their craft.
+                </p>
+              </div>
             </div>
           </div>
-      
-          <div class="row">
-            <div class="col text-center">
-              <p class="lead">
-                <a href="https://www.facebook.com/sortragos"><i class="icon icon-facebook" aria-hidden="true"></i></a>
-                <a href="https://www.instagram.com/sortragos"><i class="icon icon-instagram" aria-hidden="true"></i></a>
-              </p>
+        </section>
+        <section class="projects" id="projects">
+          <h2>Projects</h2>
+          <div class="projects__list">
+            <div class="item">
+              <div class="item__image">
+                <img src="/src/images/prj1.jpg" alt="" />
+              </div>
+              <div class="item__description">
+                <h3>Virtual Office</h3>
+                <p>
+                  Virtual office for clients of a company that provides
+                  electricity
+                </p>
+                <ul>
+                  <li><img src="/src/images/js.svg" alt="" /></li>
+                  <li><img src="/src/images/html.svg" alt="" /></li>
+                  <li><img src="/src/images/css.svg" alt="" /></li>
+                </ul>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item__image">
+                <img src="/src/images/prj2.jpg" alt="" />
+              </div>
+              <div class="item__description">
+                <h3>Application Tracker</h3>
+                <p>
+                  A tracker to be notified when your health insurance has been
+                  aproved
+                </p>
+                <ul>
+                  <li><img src="/src/images/js.svg" alt="" /></li>
+                  <li><img src="/src/images/html.svg" alt="" /></li>
+                  <li><img src="/src/images/css.svg" alt="" /></li>
+                </ul>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item__image">
+                <img src="/src/images/prj3.jpg" alt="" />
+              </div>
+              <div class="item__description">
+                <h3>Coding Latam</h3>
+                <p>
+                  Education startup to help new programmers to improve their
+                  skills
+                </p>
+                <ul>
+                  <li><img src="/src/images/js.svg" alt="" /></li>
+                  <li><img src="/src/images/html.svg" alt="" /></li>
+                  <li><img src="/src/images/css.svg" alt="" /></li>
+                </ul>
+              </div>
+            </div>
+            <div class="item">
+              <div class="item__image">
+                <img src="/src/images/prj4.jpg" alt="" />
+              </div>
+              <div class="item__description">
+                <h3>Package Tracker client</h3>
+                <p>Alternative client to track your packages for Peru users.</p>
+                <ul>
+                  <li><img src="/src/images/js.svg" alt="" /></li>
+                  <li><img src="/src/images/html.svg" alt="" /></li>
+                  <li><img src="/src/images/css.svg" alt="" /></li>
+                  <li><img src="/src/images/react.svg" alt="" /></li>
+                </ul>
+              </div>
             </div>
           </div>
+        </section>
+        <section class="contact" id="contact">
+          <h2>Stay Connected</h2>
+          <p>Tacna, PE</p>
+          <h2>hola@angeloleva.dev</h2>
+          <p>(+51)952719643</p>
+          <div class="contact__icons">
+            <div class="item twitter">
+              <a target="_blank" href="https://twitter.com/angelolev">
+                <span class="icon icon-twitter"></span
+              ></a>
+            </div>
+            <div class="item whatsapp">
+              <a target="_blank" href="https://wa.link/fp2ztd">
+                <span class="icon icon-whatsapp"></span
+              ></a>
+            </div>
+            <div class="item github">
+              <a target="_blank" href="https://github.com/angelolev">
+                <span class="icon icon-github"></span
+              ></a>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <footer class="footer">
+        <div class="footer__logo">
+          <img src="/src/images/logo.png" alt="Angelo Leva" />
+        </div>
+        <div class="footer__links">
+          <ul>
+            <li><a class="scrollable" href="#about">ABOUT</a></li>
+            <li><a class="scrollable" href="#projects">PROJECTS</a></li>
+            <li><a class="scrollable" href="#contact">CONTACT</a></li>
+          </ul>
+        </div>
+        <div class="footer__copyright">
+          <p>© 2020 Angelo Leva. All rights Reserved</p>
         </div>
       </footer>
-    <script src="assets/js/bundle.js"></script>
-    <!-- Modal -->
-    <div class="modal fade" id="modalExplanation" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">Como participar?</h4>
-            </div>
-            <div class="modal-body">
-            <p>Para poder adquirir tus opciones, deberás realizar el pago de estas vía App, Transferencia bancaria o interbancaria a una de las siguientes cuentas:</p>
-            <ul>
-                <li><p>Cuenta BCP Soles: <b>193-927389780-32</b></p></li>
-                <li><p>Yape: <b>952719643</b></p></li>
-                <li><p>Cuenta Interbank Soles: <b>087-30834974-85</b></p></li>
-                <li><p>Cuenta BBVA Soles: <b>0011-0960-0200123115</b></p></li>
-            </ul>
-            <p>Recuerda que cada opción tiene el costo de <b>S/ 1 sol</b>.</p>
-            <p>Luego de efectuar el pago, envíanos una foto del voucher por las siguientes vías:</p>
-            <ul>
-                <li><a href="http://m.me/sortragos">Facebook Messenger</a></li>
-                <li>Email: <b>hola@sortragos.com</b></li>
-            </ul>
-            <p>En unos minutos, recibirás un correo/mensaje con tu ticket de opciones para el sorteo actual, un ticket muy similar a éste:</p>
-            <img src="assets/images/sortragos-ticket.png" />
-            <p>El ticket indica el producto que se sortea, fecha y hora del sorteo.</p>
-            <p><small><b>NOTA IMPORTANTE:</b> Desde el 17 de Diciembre de 2018 hasta el 17 de Enero de 2019, todas las opciones que adquieras, se <b>TRIPLICARAN!</b></small></p>
-            </div>
-            <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-            </div>
-        </div>
-        </div>
-    </div>
-</body>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="/src/js/index.js"></script>
+  </body>
 </html>

@@ -1,0 +1,596 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #f5f5f5;
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #2c3e50;
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 34px;
+  line-height: 38px;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 50px;
+  }
+}
+
+h2 {
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  h2 {
+    font-size: 32px;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+.box.blue {
+  background-color: #2c3e50;
+  min-height: 400px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .box.blue {
+    min-height: 200px;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0 20px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 690px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 920px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1170px;
+  }
+}
+
+@font-face {
+  font-family: "icomoon";
+  src: url("/src/fonts/icomoon.eot?abz2dm");
+  src: url("/src/fonts/icomoon.eot?abz2dm#iefix") format("embedded-opentype"), url("/src/fonts/icomoon.ttf?abz2dm") format("truetype"), url("/src/fonts/icomoon.woff?abz2dm") format("woff"), url("/src/fonts/icomoon.svg?abz2dm#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-whatsapp:before {
+  content: "\ea93";
+}
+
+.icon-twitter:before {
+  content: "\ea96";
+}
+
+.icon-github:before {
+  content: "\eab0";
+}
+
+a.btn,
+button.btn {
+  background-color: #38b6ff;
+  color: #ffffff;
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  width: auto;
+}
+
+a.btn:hover,
+button.btn:hover {
+  text-decoration: none;
+}
+
+.nav {
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px 15px 5px 5px;
+}
+
+.nav__logo {
+  width: 20%;
+}
+
+.nav__logo img {
+  max-width: 70px;
+}
+
+.nav__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 80%;
+}
+
+.nav__name {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .nav__name {
+    display: none;
+  }
+}
+
+.nav__profile {
+  display: none;
+}
+
+.nav__profile p {
+  color: #ada6a6;
+}
+
+@media (min-width: 768px) {
+  .nav__profile {
+    display: block;
+  }
+}
+
+.nav__contact {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .nav__contact {
+    display: block;
+  }
+}
+
+.nav__contact p {
+  font-weight: bold;
+}
+
+.header {
+  background-color: #ffffff;
+  padding: 60px 30px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .header {
+    background: url("src/images/wave.svg") no-repeat;
+    background-color: #ffffff;
+    background-size: cover;
+    background-position: right 135px;
+    padding: 100px 30px;
+    text-align: left;
+  }
+}
+
+.header h1 {
+  margin-bottom: 20px;
+}
+
+.header h3 {
+  margin-bottom: 10px;
+}
+
+.header a.btn {
+  max-width: 115px;
+  margin: 20px auto 0;
+}
+
+@media (min-width: 768px) {
+  .header a.btn {
+    margin: 0;
+  }
+}
+
+.header p {
+  margin-bottom: 15px;
+}
+
+.contact {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.contact h2 {
+  font-weight: bold;
+  margin: 5px 0 10px;
+}
+
+.contact h3 {
+  font-weight: bold;
+  margin-bottom: 50px;
+}
+
+.contact p {
+  color: #000000;
+}
+
+.contact p:first-of-type {
+  color: #ada6a6;
+}
+
+.contact__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-top: 30px;
+}
+
+@media (min-width: 768px) {
+  .contact__icons {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+.contact__icons .item {
+  border-radius: 50%;
+  padding: 10px 0;
+}
+
+.contact__icons .item.whatsapp {
+  background: rgba(0, 128, 0, 0.07);
+}
+
+.contact__icons .item.twitter {
+  background: rgba(56, 182, 255, 0.13);
+}
+
+.contact__icons .item.github {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.contact__icons a {
+  padding: 0 10px;
+  text-decoration: none;
+}
+
+.contact__icons a span {
+  font-size: 40px;
+}
+
+.contact__icons a span.icon-whatsapp {
+  color: green;
+}
+
+.contact__icons a span.icon-twitter {
+  color: #38b6ff;
+}
+
+.contact__icons a span.icon-github {
+  color: #000000;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 50px 20px;
+  background-color: #ffffee;
+}
+
+.footer__logo {
+  width: 25%;
+}
+
+@media (min-width: 768px) {
+  .footer__logo {
+    width: 10%;
+  }
+}
+
+.footer__logo img {
+  display: block;
+  max-width: 70px;
+}
+
+.footer__links {
+  width: 75%;
+}
+
+@media (min-width: 768px) {
+  .footer__links {
+    width: 50%;
+    text-align: center;
+  }
+}
+
+.footer__links ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.footer__links ul li a {
+  color: #2c3e50;
+  text-decoration: none;
+}
+
+.footer__copyright {
+  text-align: center;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .footer__copyright {
+    width: 40%;
+  }
+}
+
+.features {
+  padding: 50px 0;
+  margin-top: -390px;
+}
+
+@media (min-width: 768px) {
+  .features {
+    margin-top: -235px;
+  }
+}
+
+.features h2 {
+  text-align: center;
+  color: #ffffff;
+}
+
+.features__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.features__list .item {
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 2px 12px 0px rgba(60, 60, 60, 0.1);
+          box-shadow: 0 2px 12px 0px rgba(60, 60, 60, 0.1);
+  max-width: 290px;
+  margin: 0 auto 30px;
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .features__list .item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 535px;
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .features__list .item {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    max-width: 295px;
+  }
+}
+
+.features__list .item .item__image {
+  background: rgba(56, 182, 255, 0.2);
+  padding: 30px 0;
+}
+
+@media (min-width: 768px) {
+  .features__list .item .item__image {
+    width: 40%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .features__list .item .item__image {
+    width: 100%;
+  }
+}
+
+.features__list .item .item__image img {
+  display: block;
+  margin: 0 auto;
+  max-width: 115px;
+}
+
+.features__list .item .item__text {
+  text-align: center;
+  padding-top: 20px;
+}
+
+@media (min-width: 768px) {
+  .features__list .item .item__text {
+    width: 60%;
+    padding: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .features__list .item .item__text {
+    width: 100%;
+  }
+}
+
+.features__list .item .item__text h3 {
+  margin-bottom: 20px;
+}
+
+.projects h2 {
+  text-align: center;
+}
+
+.projects__list .item {
+  max-width: 290px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+@media (min-width: 768px) {
+  .projects__list .item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 100%;
+  }
+  .projects__list .item:nth-child(even) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+}
+
+.projects__list .item .item__image {
+  padding: 20px 0;
+}
+
+@media (min-width: 768px) {
+  .projects__list .item .item__image {
+    width: 60%;
+  }
+}
+
+@media (min-width: 768px) {
+  .projects__list .item .item__description {
+    width: 40%;
+    padding: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  .projects__list .item .item__description h3 {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .projects__list .item .item__description h3 {
+    font-size: 28px;
+  }
+}
+
+.projects__list .item .item__description p {
+  margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+  .projects__list .item .item__description p {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .projects__list .item .item__description p {
+    font-size: 20px;
+  }
+}
+
+.projects__list .item .item__description ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 10px;
+}
+
+.projects__list .item .item__description ul li {
+  margin-right: 5px;
+}
+
+.projects__list .item .item__description ul li:first-child {
+  margin-right: 2px;
+}
+
+.projects__list .item .item__description ul li:first-child img {
+  width: 32px;
+}
+
+.projects__list .item .item__description ul li:last-child img {
+  margin-left: -2px;
+  width: 28px;
+}
+
+.projects__list .item .item__description ul li img {
+  max-width: 100%;
+  width: 23px;
+}
+/*# sourceMappingURL=styles.css.map */

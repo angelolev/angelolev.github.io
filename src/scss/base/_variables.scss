@@ -1,71 +1,18 @@
-//** Responsive resolutions
-$xxs: 375px;
-$xs: 480px;
+//Colors
+$color-primary: #38b6ff;
+$color-secondary: #ffffee;
+$color-white: #ffffff;
+$color-black: #000000;
+$color-blue: #2c3e50;
+$color-heading: $color-blue;
+
+//Fonts
+$font-primary: "Lato", sans-serif;
+$font-heading: "Lato", sans-serif;
+
+//Sizes
+$xs: 375px;
+$xs-ls: 568px;
 $sm: 768px;
 $md: 992px;
 $lg: 1200px;
-
-//** Colors
-$white: #ffffff;
-$light-blue: #00a4e4;
-$blue: #0057B8;
-$bg-gray: #f9f9f9;
-$bg-light-gray: #ebebeb;
-$dark-blue: #002554;
-$orange: #E36F1E;
-$dark-orange: #f5781f;
-$black: #000000;
-$horizontal-line: #ECE7E7;
-$gray: #54565B;
-$light-gray: #75777A;
-$dark-gray: #4A4A49;
-$soft-gray: #b1b1b1;
-$text-gray: #76777B;
-$red: #ff0000;
-$lazy-image: #f1f1fa;
-//** Fonts
-$main-font: 'Source Sans Pro', sans-serif;
-$secondary-font: 'Futura PT';
-$secondary-font-bold: 'Futura PT Bold';
-
-//== Font sizes
-$text-size: 18px;
-
-//== Font weight
-$light: 300;
-$normal: 400;
-$bold: 600;
-
-//** Bootstrap
-$bootstrap-sass-asset-helper: false !default;
-
-//== Colors
-$brand-primary: $blue !default;
-
-//== Scaffolding
-$link-hover-decoration: none !default;
-
-//== Typography
-$headings-font-weight: $bold;
-
-//== Iconography
-$icon-font-path: if($bootstrap-sass-asset-helper, "/", "/assets/fonts/") !default;
-
-//== Components
-$padding-large-vertical: 19px !default;
-$padding-large-horizontal: 16px !default;
-
-//== Buttons
-$btn-font-weight: $normal !default;
-$btn-default-color: $blue !default;
-$btn-default-bg: $white !default;
-$btn-default-border: transparent !default;
-$btn-primary-color: $white !default;
-$btn-primary-bg: $brand-primary !default;
-$btn-primary-border: darken($btn-primary-bg, 5%) !default;
-
-//== Forms
-$input-color: $dark-gray !default;
-$input-border: $dark-gray !default;
-$input-border-radius: 0 !default;
-$input-color-placeholder: $light-gray !default;

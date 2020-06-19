@@ -1,0 +1,28 @@
+.box {
+  &.blue {
+    background-color: $color-blue;
+    min-height: 400px;
+    width: 100%;
+
+    @include breakpoint($sm) {
+      min-height: 200px;
+    }
+  }
+}
+.container {
+  margin: 0 auto;
+  max-width: 100%;
+  padding: 0 20px;
+
+  @include breakpoint($sm) {
+    max-width: 690px;
+  }
+
+  @include breakpoint($md) {
+    max-width: 920px;
+  }
+
+  @include breakpoint($lg) {
+    max-width: 1170px;
+  }
+}
