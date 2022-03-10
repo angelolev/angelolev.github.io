@@ -523,6 +523,10 @@ button.btn:hover {
   margin-bottom: 20px;
 }
 
+.features__list .item .item__text p {
+  line-height: 24px;
+}
+
 .projects h2 {
   text-align: center;
 }
