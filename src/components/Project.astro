@@ -1,0 +1,75 @@
+---
+const { projectImage, title, description, link, stack } = Astro.props;
+---
+
+<div class="project">
+  <div class="project__image">
+    <a href={link} target="_blank">
+      <img src=`/assets/${projectImage}` alt=`${projectImage}` />
+    </a>
+  </div>
+  <div class="project__information">
+    <h3>{title}</h3>
+    <p>{description}</p>
+    <ul>
+        {stack.map((item) => (
+            <li><img class="project__stack" src=`/assets/${item}.svg` alt=`${item}` title=`${item}` /></li>
+            )
+        )}
+    </ul>
+  </div>
+</div>
+
+<style lang="scss">
+    .project {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-bottom: 30px;
+        justify-content: flex-end;
+        align-items: center;
+
+        @media(min-width: 768px) {
+            margin-bottom: 50px;
+        }
+
+        @media(min-width: 1024px) {
+            justify-content: space-between;
+            margin-bottom: 80px;
+        }
+
+        &:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+
+        &__image {
+            box-shadow: 0 0.2rem 1.2rem 0 rgba(60,60,60,.1);
+            transition: all 300ms;
+
+            &:hover {
+                transform: translateY(-0.25rem);
+                box-shadow: 0 0.2rem 1.2rem 0 rgba(60, 60, 60, 0.42);
+            }
+            img {
+                @media (min-width: 1024px) {
+                    max-width: 550px;
+                }
+            }
+
+            
+        }
+
+        &__information {
+            max-width: 400px;
+            ul {
+                display: flex;
+                list-style: none;
+                gap: 10px
+            }
+        }
+
+        &__stack {
+            width: 40px;
+        }
+    }
+</style>

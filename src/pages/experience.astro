@@ -1,0 +1,29 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import Hero from "../components/Hero.astro";
+import { getCollection } from "astro:content";
+import Job from "../components/Job.astro";
+
+const jobs = (await getCollection("jobs")).sort(
+  (a, b) => b.data.jobStartDate.valueOf() - a.data.jobStartDate.valueOf()
+);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header title={SITE_TITLE} />
+    <main>
+      <Hero />
+      {jobs.map((job) => <Job {...job.data} />)}
+    </main>
+    <Footer />
+    <style lang="scss"></style>
+  </body>
+</html>

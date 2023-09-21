@@ -1,0 +1,15 @@
+---
+jobLink: "https://www.lahaus.com/"
+jobPlace: "La Haus"
+jobTitle: "Mid Frontend Developer"
+jobStartDate: "2022"
+jobStack: ["react", "vue", "nuxt", "sass", "storybook"]
+jobResponsibilities: [
+    "Create La Haus Design System",
+    "Style components for mobile and desktop resolutions based on
+    Figma mockups with a huge focus on accessibility and reusability",
+    "Document component structure and behavior using Storybook",
+    "Implement a deployment process for a NPM package using Semantic
+    release for new package versions",
+  ]
+---

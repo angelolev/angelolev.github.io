@@ -1,0 +1,60 @@
+---
+
+---
+
+<section class="hero">
+  <div class="hero__information">
+    <h1>Angelo Leva</h1>
+    <h2>
+      I like to code things from scratch, and enjoy bringing ideas to life in
+      the browser.
+    </h2>
+  </div>
+  <div class="hero__image">
+    <img src="/assets/profile.png" alt="" />
+  </div>
+</section>
+
+<style lang="scss">
+  .hero {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 60px;
+    padding: 3rem 0;
+
+    @media (min-width: 768px) {
+      flex-wrap: nowrap;
+      padding: 5rem 0;
+    }
+
+    &__information {
+      @media (min-width: 768px) {
+        max-width: 40rem;
+      }
+
+      @media (min-width: 1024px) {
+        max-width: 50rem;
+      }
+
+      h2 {
+        font-weight: 500;
+      }
+    }
+
+    &__image {
+      margin: 0 auto;
+
+      img {
+        border-radius: 50%;
+        filter: grayscale(50%);
+        max-width: 250px;
+
+        @media (min-width: 1024px) {
+          max-width: 90%;
+        }
+      }
+    }
+  }
+</style>

@@ -1,0 +1,56 @@
+---
+const { jobLink, jobPlace, jobTitle, jobStartDate, jobStack, jobResponsibilities} = Astro.props;
+---
+
+<div class="job">
+  <h2 class="job__place">
+    <a href=`${jobLink}`>{jobPlace}</a>
+  </h2>
+  <p class="job__date">{jobStartDate}</p>
+  <h3 class="job__title">{jobTitle}</h3>
+  <h4>Tasks</h4>
+  <ul class="job__tasks">
+    {jobResponsibilities.map((item)=> (
+        <li>{item}</li>
+    ))}
+  </ul>
+  <ul class="job__stack-list">
+    {jobStack.map((item) => (
+        <li><img class="job__stack" src=`/assets/${item}.svg` alt=`${item}` title=`${item}` /></li>
+        )
+    )}
+</ul>
+</div>
+
+<style lang="scss">
+    .job {
+        margin-bottom: 3rem;
+
+        &__stack-list {
+            display: flex;
+            list-style: none;
+            gap: 5px;
+            align-items: center;
+            margin-top: 2rem;
+        }
+
+        &__stack {
+            width: 40px;
+            
+        }
+
+        &__tasks {
+            padding-left: 2rem;
+        }
+
+        li {
+            line-height: 2.5rem;
+            font-size: 1.6rem;
+
+            @media (min-width: 768px) {
+                font-size: 1.8rem;
+                line-height: 3rem;
+            }
+        }
+    }
+</style>
