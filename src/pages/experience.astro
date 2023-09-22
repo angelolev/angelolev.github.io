@@ -6,10 +6,13 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 import Hero from "../components/Hero.astro";
 import { getCollection } from "astro:content";
 import Job from "../components/Job.astro";
+import Video from "../components/Video.astro";
 
 const jobs = (await getCollection("jobs")).sort(
   (a, b) => b.data.jobStartDate.valueOf() - a.data.jobStartDate.valueOf()
 );
+
+const videos = await getCollection("videos");
 ---
 
 <!doctype html>
@@ -22,8 +25,56 @@ const jobs = (await getCollection("jobs")).sort(
     <main>
       <Hero />
       {jobs.map((job) => <Job {...job.data} />)}
+      <h2>Content creator</h2>
+      <p>
+        I like to share things I learn on my projects and create content that
+        could help other developers.
+      </p>
+      <p>I share content on:</p>
+      <ul>
+        <li><img src="/assets/youtube.svg" />Youtube - 3.3k followers</li>
+        <li><img src="/assets/tiktok.svg" />Tiktok - 6.5k followers</li>
+        <li><img src="/assets/instagram.svg" />Instagram - 4.7k followers</li>
+      </ul>
+      <div class="video-list">
+        {videos.map((video) => <Video {...video.data} />)}
+      </div>
     </main>
     <Footer />
     <style lang="scss"></style>
+    <style lang="scss">
+      h2 {
+        margin-bottom: 3rem;
+      }
+      ul {
+        list-style: none;
+        margin-bottom: 3rem;
+
+        li {
+          display: flex;
+          font-size: 1.6rem;
+          align-items: center;
+          line-height: 4rem;
+          gap: 0.5rem;
+
+          @media (min-width: 768px) {
+            font-size: 2rem;
+          }
+
+          img {
+            max-width: 3rem;
+          }
+        }
+      }
+      .video-list {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 3rem;
+
+        @media (min-width: 768px) {
+          grid-template-columns: repeat(3, minmax(100px, 1fr));
+        }
+      }
+    </style>
   </body>
 </html>
