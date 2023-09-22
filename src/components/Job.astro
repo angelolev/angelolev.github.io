@@ -1,10 +1,13 @@
 ---
 const { jobLink, jobPlace, jobTitle, jobStartDate, jobStack, jobResponsibilities} = Astro.props;
+const formattedJob = jobPlace.toString().toLowerCase()
 ---
 
 <div class="job">
   <h2 class="job__place">
-    <a href=`${jobLink}`>{jobPlace}</a>
+    <a href=`${jobLink}`>
+        <img src=`/assets/${formattedJob}.svg` alt="">
+    </a>
   </h2>
   <p class="job__date">{jobStartDate}</p>
   <h3 class="job__title">{jobTitle}</h3>
@@ -24,7 +27,13 @@ const { jobLink, jobPlace, jobTitle, jobStartDate, jobStack, jobResponsibilities
 
 <style lang="scss">
     .job {
-        margin-bottom: 3rem;
+        margin-bottom: 5rem;
+
+        &__place {
+            img {
+                max-width: 18rem;
+            }
+        }
 
         &__stack-list {
             display: flex;

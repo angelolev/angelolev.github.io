@@ -1,6 +1,6 @@
 ---
 jobLink: "https://www.lahaus.com/"
-jobPlace: "La Haus"
+jobPlace: "LaHaus"
 jobTitle: "Mid Frontend Developer"
 jobStartDate: "2022"
 jobStack: ["vue", "nuxt", "sass", "storybook"]
