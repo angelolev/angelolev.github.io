@@ -1,12 +1,16 @@
 ---
-import { Icon } from "astro-icon";
 const today = new Date();
 ---
 
-<footer>
+<footer class="pt-8 pr-4 pb-24 pl-4 text-center bg-light-gray text-gray">
   Get in touch
-  <div class="social-links">
-    <a href="https://www.linkedin.com/in/angeloleva/" target="_blank">
+
+  <div class="social-links flex justify-center gap-4 mt-4">
+    <a
+      class="no-underline text-gray hover:text-dark-gray"
+      href="https://www.linkedin.com/in/angeloleva/"
+      target="_blank"
+    >
       <span class="sr-only">Follow on Linkedin</span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -19,7 +23,11 @@ const today = new Date();
         ></path></svg
       >
     </a>
-    <a href="https://twitter.com/angelolev" target="_blank">
+    <a
+      class="no-underline text-gray hover:text-dark-gray"
+      href="https://twitter.com/angelolev"
+      target="_blank"
+    >
       <span class="sr-only">Follow on Twitter</span>
       <svg
         viewBox="0 0 16 16"
@@ -33,7 +41,11 @@ const today = new Date();
         ></path></svg
       >
     </a>
-    <a href="https://github.com/angelolev" target="_blank">
+    <a
+      class="no-underline text-gray hover:text-dark-gray"
+      href="https://github.com/angelolev"
+      target="_blank"
+    >
       <span class="sr-only">Go to Angelo's GitHub repo</span>
       <svg
         viewBox="0 0 16 16"
@@ -47,7 +59,11 @@ const today = new Date();
         ></path></svg
       >
     </a>
-    <a href="https://www.tiktok.com/@angelo.dev" target="_blank">
+    <a
+      class="no-underline text-gray hover:text-dark-gray"
+      href="https://www.tiktok.com/@angelo.dev"
+      target="_blank"
+    >
       <span class="sr-only">Go to Angelo's Tiktok page</span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -60,7 +76,11 @@ const today = new Date();
         ></path></svg
       >
     </a>
-    <a href="https://www.youtube.com/codinglatam" target="_blank">
+    <a
+      class="no-underline text-gray hover:text-dark-gray"
+      href="https://www.youtube.com/codinglatam"
+      target="_blank"
+    >
       <span class="sr-only">Go to Angelo's Youtube channel</span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -75,24 +95,3 @@ const today = new Date();
     </a>
   </div>
 </footer>
-<style>
-  footer {
-    padding: 2em 1em 6em 1em;
-    background-color: var(--light-gray);
-    color: rgb(var(--gray));
-    text-align: center;
-  }
-  .social-links {
-    display: flex;
-    justify-content: center;
-    gap: 1em;
-    margin-top: 1em;
-  }
-  .social-links a {
-    text-decoration: none;
-    color: rgb(var(--gray));
-  }
-  .social-links a:hover {
-    color: rgb(var(--gray-dark));
-  }
-</style>

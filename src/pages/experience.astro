@@ -12,7 +12,36 @@ const jobs = (await getCollection("jobs")).sort(
   (a, b) => b.data.jobStartDate.valueOf() - a.data.jobStartDate.valueOf()
 );
 
-const videos = await getCollection("videos");
+const channelId = "UCS0emIw9cgv9RIMowHlq3ng";
+const channelURL = encodeURIComponent(
+  `https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`
+);
+const requestURL = `https://api.rss2json.com/v1/api.json?rss_url=${channelURL}`;
+
+async function fetchData(url: string) {
+  const response = await fetch(url);
+  const data = await response.json();
+
+  return data.items;
+}
+
+const loadVideos = async (url: string) => {
+  try {
+    const response = await fetchData(url);
+
+    return response;
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+interface IVideo {
+  thumbnail: string;
+  title: string;
+  link: string;
+}
+
+const videos = await loadVideos(requestURL);
 ---
 
 <!doctype html>
@@ -33,11 +62,19 @@ const videos = await getCollection("videos");
       <p>I share content on:</p>
       <ul>
         <li><img src="/assets/youtube.svg" />Youtube - 3.4k followers</li>
-        <li><img src="/assets/tiktok.svg" />Tiktok - 7.3k followers</li>
+        <li><img src="/assets/tiktok.svg" />Tiktok - 7.8k followers</li>
         <li><img src="/assets/instagram.svg" />Instagram - 4.7k followers</li>
       </ul>
       <div class="video-list">
-        {videos.map((video) => <Video {...video.data} />)}
+        {
+          videos.map((video: IVideo) => (
+            <Video
+              thumbnail={video.thumbnail}
+              title={video.title}
+              link={video.link}
+            />
+          ))
+        }
       </div>
     </main>
     <Footer />
@@ -76,5 +113,6 @@ const videos = await getCollection("videos");
         }
       }
     </style>
+    <script></script>
   </body>
 </html>
