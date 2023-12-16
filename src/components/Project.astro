@@ -2,15 +2,15 @@
 const { projectImage, title, description, link, stack } = Astro.props;
 ---
 
-<div class="project">
+<div class="project flex flex-wrap gap-[20px] pb-[130px] justify-center items-center lg:justify-between">
   <div class="project__image">
     <a href={link} target="_blank">
       <img src=`/assets/${projectImage}` alt=`${projectImage}` />
     </a>
   </div>
   <div class="project__information">
-    <h3>{title}</h3>
-    <p>{description}</p>
+    <h3 class="text-4xl font-bold mb-2">{title}</h3>
+    <p class="text-3xl mb-6">{description}</p>
     <ul>
         {stack.map((item) => (
             <li><img class="project__stack" src=`/assets/${item}.svg` alt=`${item}` title=`${item}` /></li>
@@ -22,17 +22,6 @@ const { projectImage, title, description, link, stack } = Astro.props;
 
 <style lang="scss">
     .project {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        padding-bottom: 130px;
-        justify-content: flex-end;
-        align-items: center;
-
-        @media(min-width: 1024px) {
-            justify-content: space-between;
-        }
-
         &:nth-child(odd) {
             flex-direction: row-reverse;
         }

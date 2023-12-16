@@ -9,6 +9,9 @@ module.exports = {
         link: "#fbc531",
         "light-gray": "#f9fafc",
       },
+      gridTemplateColumns: {
+        experience: "repeat(3, minmax(100px, 1fr))",
+      },
     },
   },
   plugins: [],
