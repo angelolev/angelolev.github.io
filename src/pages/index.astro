@@ -21,7 +21,7 @@ const projects = await getCollection("projects");
     <main>
       <Hero />
       <section class="projects">
-        <h2>Projects</h2>
+        <h2 class="font-bold">Projects</h2>
         {projects.map((project) => <Project {...project.data} />)}
       </section>
     </main>
