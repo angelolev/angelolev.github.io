@@ -1,9 +1,11 @@
 ---
-const today = new Date();
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <footer class="pt-8 pr-4 pb-24 pl-4 text-center bg-light-gray text-gray">
-  Get in touch
+  {t("footer.contact")}
 
   <div class="social-links flex justify-center gap-4 mt-4">
     <a

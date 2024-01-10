@@ -1,0 +1,54 @@
+---
+import { getLangFromUrl } from "../i18n/utils";
+import BaseHead from "../components/BaseHead.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import LanguagePicker from "../components/LanguagePicker.astro";
+
+const lang = getLangFromUrl(Astro.url);
+---
+
+<html lang={lang}>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <script>
+      // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      } else {
+        document.documentElement.classList.remove("dark");
+      }
+
+      // Whenever the user explicitly chooses light mode
+      localStorage.theme = "light";
+
+      // Whenever the user explicitly chooses dark mode
+      localStorage.theme = "dark";
+
+      // Whenever the user explicitly chooses to respect the OS preference
+      localStorage.removeItem("theme");
+    </script>
+  </head>
+  <body class="dark:bg-slate-800 dark:text-slate-100 relative">
+    <LanguagePicker />
+    <Header title={SITE_TITLE} />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+    <style lang="scss">
+      .projects {
+        h2 {
+          text-align: center;
+          padding: 2rem 0 5rem;
+          font-size: 4rem;
+        }
+      }
+    </style>
+  </body>
+</html>

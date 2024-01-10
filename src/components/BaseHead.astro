@@ -9,8 +9,6 @@ interface Props {
   image?: string;
 }
 
-const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-
 const { title, description, image = "/site.png" } = Astro.props;
 ---
 
@@ -27,9 +25,6 @@ const { title, description, image = "/site.png" } = Astro.props;
   href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap"
   rel="stylesheet"
 />
-
-<!-- Canonical URL -->
-<link rel="canonical" href={canonicalURL} />
 
 <!-- Primary Meta Tags -->
 <title>{title}</title>

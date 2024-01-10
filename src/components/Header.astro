@@ -1,18 +1,24 @@
 ---
 import HeaderLink from "./HeaderLink.astro";
 import { SITE_TITLE } from "../consts";
+
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
-<header>
+<header class="dark:bg-slate-600">
   <nav>
     <h2>
       <a href="/"><img src="/assets/code.svg" /><span>{SITE_TITLE}</span></a>
     </h2>
     <div class="internal-links">
-      <HeaderLink href="/">Home</HeaderLink>
+      <HeaderLink href={`/${lang}/`}>{t("nav.home")}</HeaderLink>
       <!-- <HeaderLink href="/blog">Blog</HeaderLink>
       <HeaderLink href="/about">About</HeaderLink> -->
-      <HeaderLink href="/experience">Career</HeaderLink>
+      <HeaderLink href={`/${lang}/experience`}>
+        {t("nav.experience")}
+      </HeaderLink>
     </div>
     <div class="social-links">
       <a href="https://twitter.com/angelolev" target="_blank">
@@ -50,7 +56,7 @@ import { SITE_TITLE } from "../consts";
   header {
     margin: 0;
     padding: 0 1em;
-    background-color: var(--light-gray);
+    /* background-color: var(--light-gray); */
     box-shadow: 0 2px 8px rgba(var(--black), 5%);
   }
   h2 {

@@ -1,5 +1,8 @@
 ---
-
+const personalLabel =
+  Astro.currentLocale === "en"
+    ? "I am a frontend developer who enjoy bringing ideas to life in the browser."
+    : "Soy un desarrollador web frontend. Me gusta darle vida a las ideas en el navegador.";
 ---
 
 <section
@@ -8,7 +11,7 @@
   <div class="md:max-w-[40rem] lg:max-w-[50rem]">
     <h1 class="text-9xl font-bold mb-6">Angelo Leva</h1>
     <h2 class="text-5xl font-medium leading-snug">
-      I am a frontend developer who enjoy bringing ideas to life in the browser.
+      {personalLabel}
     </h2>
   </div>
   <div class="mx-auto my-0">

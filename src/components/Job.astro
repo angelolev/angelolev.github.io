@@ -1,4 +1,7 @@
 ---
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 const { jobLink, jobPlace, jobTitle, jobStartDate, jobStack, jobResponsibilities} = Astro.props;
 const formattedJob = jobPlace.toString().toLowerCase()
 ---
@@ -11,7 +14,7 @@ const formattedJob = jobPlace.toString().toLowerCase()
   </h2>
   <p class="job__date">{jobStartDate}</p>
   <h3 class="job__title text-4xl font-bold my-8">{jobTitle}</h3>
-  <h4 class="text-3xl mb-6 underline font-bold">Tasks</h4>
+  <h4 class="text-3xl mb-6 underline font-bold">{t("job.tasksLabel")}</h4>
   <ul class="job__tasks">
     {jobResponsibilities.map((item)=> (
         <li>{item}</li>
