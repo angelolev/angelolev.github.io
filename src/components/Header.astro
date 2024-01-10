@@ -2,9 +2,14 @@
 import HeaderLink from "./HeaderLink.astro";
 import { SITE_TITLE } from "../consts";
 
-import { getLangFromUrl, useTranslations } from "../i18n/utils";
+import {
+  getLangFromUrl,
+  useTranslations,
+  useTranslatedPath,
+} from "../i18n/utils";
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
 ---
 
 <header class="dark:bg-slate-600">
@@ -13,10 +18,10 @@ const t = useTranslations(lang);
       <a href="/"><img src="/assets/code.svg" /><span>{SITE_TITLE}</span></a>
     </h2>
     <div class="internal-links">
-      <HeaderLink href={`/${lang}/`}>{t("nav.home")}</HeaderLink>
+      <HeaderLink href={translatePath("/")}>{t("nav.home")}</HeaderLink>
       <!-- <HeaderLink href="/blog">Blog</HeaderLink>
       <HeaderLink href="/about">About</HeaderLink> -->
-      <HeaderLink href={`/${lang}/experience`}>
+      <HeaderLink href={translatePath("/experience/")}>
         {t("nav.experience")}
       </HeaderLink>
     </div>

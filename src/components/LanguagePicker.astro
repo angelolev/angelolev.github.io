@@ -4,10 +4,13 @@ import { languages } from "../i18n/ui";
 
 <ul class="absolute flex gap-4 right-8 top-[100px]">
   {
-    Object.entries(languages).map(([lang, label]) => (
-      <li class="first:after:content-['|'] after:ml-4 after:text-3xl">
-        <a href={`/${lang}/`}>{label}</a>
-      </li>
-    ))
+    Object.entries(languages).map(([lang, label]) => {
+      const url = lang === "es" ? `/${lang}/` : "/";
+      return (
+        <li class="first:after:content-['|'] after:ml-4 after:text-3xl">
+          <a href={url}>{label}</a>
+        </li>
+      );
+    })
   }
 </ul>

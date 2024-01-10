@@ -1,0 +1,81 @@
+---
+import { getCollection } from "astro:content";
+import Job from "../components/Job.astro";
+import Video from "../components/Video.astro";
+import { fetchData } from "../utils";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getLangFromUrl } from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const jobs = (await getCollection("jobs")).sort(
+  (a, b) => b.data.jobStartDate.valueOf() - a.data.jobStartDate.valueOf()
+);
+
+const data = jobs.filter((job) => job.slug.startsWith(`${lang}`));
+
+const channelId = "UCS0emIw9cgv9RIMowHlq3ng";
+const channelURL = encodeURIComponent(
+  `https://www.youtube.com/feeds/videos.xml?channel_id=${channelId}`
+);
+const requestURL = `https://api.rss2json.com/v1/api.json?rss_url=${channelURL}`;
+
+const loadVideos = async (url: string) => {
+  try {
+    const response = await fetchData(url);
+
+    return response;
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+interface IVideo {
+  thumbnail: string;
+  title: string;
+  link: string;
+}
+
+const videos = await loadVideos(requestURL);
+---
+
+<BaseLayout>
+  <h1 class="text-9xl font-bold mb-12">Career</h1>
+  {data.map((job) => <Job {...job.data} />)}
+  <h2 class="text-5xl mb-12">Content creator</h2>
+  <p class="mb-6">
+    I like to share things I learn on my projects and create content that could
+    help other developers.
+  </p>
+  <p class="mb-6">I share content on:</p>
+  <ul class="list-none mb-12">
+    <li
+      class="flex text-2xl items-center leading-snug gap-2 mb-6 md:text-[2rem]"
+    >
+      <img class="max-w-[3rem]" src="/assets/youtube.svg" />Youtube - 3.4k
+      followers
+    </li>
+    <li
+      class="flex text-2xl items-center leading-snug gap-2 mb-6 md:text-[2rem]"
+    >
+      <img class="max-w-[3rem]" src="/assets/tiktok.svg" />Tiktok - 7.8k
+      followers
+    </li>
+    <li
+      class="flex text-2xl items-center leading-snug gap-2 mb-6 md:text-[2rem]"
+    >
+      <img class="max-w-[3rem]" src="/assets/instagram.svg" />Instagram - 4.7k
+      followers
+    </li>
+  </ul>
+  <div class="grid grid-cols-1 md:grid-cols-experience gap-[3rem]">
+    {
+      videos.map((video: IVideo) => (
+        <Video
+          thumbnail={video.thumbnail}
+          title={video.title}
+          link={video.link}
+        />
+      ))
+    }
+  </div>
+</BaseLayout>

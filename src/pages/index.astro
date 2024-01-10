@@ -1,1 +1,23 @@
-<meta http-equiv="refresh" content="0;url=/en/" />
+---
+import { getCollection } from "astro:content";
+import Project from "../components/Project.astro";
+import Hero from "../components/Hero.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const projects = await getCollection("projects");
+
+const data = projects.filter((project) => project.slug.startsWith(`${lang}`));
+---
+
+<BaseLayout>
+  <Hero />
+  <section class="projects">
+    <h2 class="font-bold">{t("projects.title")}</h2>
+    {data.map((project) => <Project {...project.data} />)}
+  </section>
+</BaseLayout>
+
+<!-- <meta http-equiv="refresh" content="0;url=/en/" /> -->
