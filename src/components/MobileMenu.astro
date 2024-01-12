@@ -1,0 +1,26 @@
+---
+import { SITE_TITLE } from "../consts";
+import HeaderLink from "./HeaderLink.astro";
+import {
+  getLangFromUrl,
+  useTranslations,
+  useTranslatedPath,
+} from "../i18n/utils";
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
+---
+
+<div class="pb-8 w-full md:hidden">
+  <ul class="flex gap-8 justify-center">
+    <li>
+      <HeaderLink href={translatePath("/")}>{t("nav.home")}</HeaderLink>
+    </li>
+    <li>
+      <HeaderLink href={translatePath("/experience/")}>
+        {t("nav.experience")}
+      </HeaderLink>
+    </li>
+  </ul>
+</div>

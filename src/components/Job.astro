@@ -6,63 +6,28 @@ const { jobLink, jobPlace, jobTitle, jobStartDate, jobStack, jobResponsibilities
 const formattedJob = jobPlace.toString().toLowerCase()
 ---
 
-<div class="job">
+<div class="job mb-20">
   <h2 class="job__place">
     <a href=`${jobLink}`>
-        <img src=`/assets/${formattedJob}.svg` alt="">
+        <img class="max-w-72" src=`/assets/${formattedJob}.svg` alt="">
     </a>
   </h2>
   <p class="job__date">{jobStartDate}</p>
   <h3 class="job__title text-4xl font-bold my-8">{jobTitle}</h3>
   <h4 class="text-3xl mb-6 underline font-bold">{t("job.tasksLabel")}</h4>
-  <ul class="job__tasks">
-    {jobResponsibilities.map((item)=> (
-        <li>{item}</li>
+  <ul class="job__tasks pl-0">
+    {jobResponsibilities.map((item: string)=> (
+        <li class="leading-10 text-[16px] md:leading-[3rem] before:content-['✅'] before:mr-4">{item}</li>
     ))}
   </ul>
-  <ul class="job__stack-list">
-    {jobStack.map((item) => (
-        <li><img class="job__stack" src=`/assets/${item}.svg` alt=`${item}` title=`${item}` /></li>
+  <ul class="job__stack-list flex list-none gap-2 items-center mt-8">
+    {jobStack.map((item: string) => (
+        <li><img class="job__stack w-10" src=`/assets/${item}.svg` alt=`${item}` title=`${item}` /></li>
         )
     )}
 </ul>
 </div>
 
 <style lang="scss">
-    .job {
-        margin-bottom: 5rem;
-
-        &__place {
-            img {
-                max-width: 18rem;
-            }
-        }
-
-        &__stack-list {
-            display: flex;
-            list-style: none;
-            gap: 5px;
-            align-items: center;
-            margin-top: 2rem;
-        }
-
-        &__stack {
-            width: 40px;
-            
-        }
-
-        &__tasks {
-            padding-left: 2rem;
-        }
-
-        li {
-            line-height: 2.5rem;
-            font-size: 1.6rem;
-
-            @media (min-width: 768px) {
-                font-size: 1.8rem;
-                line-height: 3rem;
-            }
-        }
-    }
+    
 </style>

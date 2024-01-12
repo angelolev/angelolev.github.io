@@ -2,13 +2,15 @@
 import { languages } from "../i18n/ui";
 ---
 
-<ul class="absolute flex gap-4 right-8 top-[100px]">
+<ul class="absolute flex gap-4 right-4 top-8 md:top-8 md:right-10">
   {
     Object.entries(languages).map(([lang, label]) => {
       const url = lang === "es" ? `/${lang}/` : "/";
       return (
         <li class="first:after:content-['|'] after:ml-4 after:text-3xl">
-          <a href={url}>{label}</a>
+          <a class="text-[14px]" href={url}>
+            {lang.toUpperCase()}
+          </a>
         </li>
       );
     })
