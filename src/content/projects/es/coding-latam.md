@@ -4,5 +4,5 @@ description: "Website para una startup de educación en línea que ayuda a los n
 pubDate: "Jul 08 2022"
 projectImage: "/coding-latam.png"
 stack: ["react", "redux", "typescript", "firebase", "sass"]
-link: "https://codinglt.dev"
+link: "https://coding-latam.vercel.app/"
 ---
